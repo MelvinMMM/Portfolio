@@ -1,0 +1,37 @@
+:root {
+  --bg-0: #030612;
+  --bg-1: #10357a;
+  --accent: #57e6ff;
+  --muted: rgba(255, 255, 255, 0.75);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --glass: rgba(255, 255, 255, 0.04);
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: Orbitron, Inter, sans-serif;
+  color: #e8faff;
+  background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+.page {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  margin: 0 25vh;
+  font-family: IBM Plex Mono;
+}
+
+.sonicapropos{
+    width: 50%;
+    margin-right: 15%;
+}
