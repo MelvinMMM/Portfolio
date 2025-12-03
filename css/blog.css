@@ -1,0 +1,56 @@
+:root {
+    --bg-0: #030612;
+    --bg-1: #10357a;
+    --accent: #57e6ff;
+    --muted: rgba(255, 255, 255, 0.75);
+    --card-bg: rgba(255, 255, 255, 0.04);
+    --radius: 14px;
+}
+
+body {
+    margin: 0;
+    font-family: Orbitron, Inter, sans-serif;
+    color: var(--muted);
+    background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
+}
+
+p {
+    color: #FFF;
+}
+
+h4 {
+    color: #FFF;
+}
+
+.page {
+    padding: 48px 16px;
+    font-family: IBM Plex Mono;
+}
+
+.blog-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    backdrop-filter: blur(6px);
+    transition: transform .25s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.03);
+}
+
+.blog-img {
+    height: 180px;
+    width: 100%;
+    border-radius: var(--radius);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 12px;
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, var(--accent), #67cfff);
+    color: #031018;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 10px 16px;
+}
