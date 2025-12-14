@@ -19,6 +19,11 @@
                 <img src="../img/logo.jpg" alt="Logo" class="brand-logo">
                 <span class="brand-name">Melvin Mateta</span>
             </a>
+            <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
             <nav class="nav">
                 <a class="nav-link" href="../projets.html">Projets</a>
                 <a class="nav-link" href="../forum.html">Blog</a>
@@ -30,25 +35,116 @@
     <main class="container page">
         <section class="project-header">
             <h1>Pokédex</h1>
-            <p class="meta">Projet</p>
+
+            <div class="project-video">
+                <video id="video" autoplay muted loop playsinline>
+                    <source src="../img/pokedex/video4.mp4" type="video/mp4">
+                </video>
+            </div>
         </section>
 
         <section class="project-block">
             <div class="project-info">
-                <p><strong>Contexte :</strong> Comme dernier contrôle de Figma, nous avous du faire un pokédex en utilisant des fonctionnalités que nous avons vu en cours.</p>
-                <p><strong>Compétences :</strong> Figma</p>
-                <p><strong>Avec qui :</strong> Melvin Mateta</p>
-                <p><strong>Quand :</strong> Juin 2025</p>
-                
+                <div class="info1">
+                    <p><strong>Compétences :</strong> Figma</p>
+                    <p><strong>Avec qui :</strong> Melvin Mateta</p>
+                    <p><strong>Quand :</strong> Juin 2025</p>
+                </div>
+                <div class="info2">
+                    C'est un pokédex conçu sur Figma pour le format téléphone. Il permet aux utilisateurs de rechercher
+                    ces pokémon préferés, de voir leurs statistiques, types et évolutions. L'interface est intuitive et
+                    colorée, rendant la navigation facile. On peut ajouter ses Pokémon en favoris ou les mettre en
+                    capturer. Je me suis inspiré d'une application pour faire le design du site.
+                </div>
             </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <p>
+                    J'ai créé une frame qui intéragit quand on click sur la pokéball.
+                </p>
+                <p>
+                    C'est une overlay qui est fix. J'ai mis un background noir avec une opacité de 25% pour faire
+                    ressortir la frame par dessus. Quand on click à nouveau sur la pokéball, l'overlay se ferme. J'ai
+                    rajouté une animation pour faire apparaître la frame de bas en haut.
+                </p>
+            </div>
+
+            <div class="project-video">
+                <video autoplay muted loop playsinline>
+                    <source src="../img/pokedex/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video">
+                <video autoplay muted loop playsinline>
+                    <source src="../img/pokedex/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="project-video-text">
+                <p>
+                    J'ai créé une frame qui intéragit quand on click sur "Version du jeu".
+                </p>
+                <p>
+                    C'est une overlay qui peut être scroll. J'ai aussi mis un background noir avec une opacité de 25%
+                    pour faire
+                    ressortir la frame par dessus. J'ai crée un rectangle insivible au dessus de l'overlay qui s'ouvre
+                    (la partie où on voit la frame d'avant). Quand on click sur la frame d'avant, l'overlay se ferme.
+                    J'ai aussi
+                    rajouté une animation pour faire apparaître la frame de bas en haut.
+                </p>
+            </div>
+        </section>
+
+        <section class="triple-block">
+            <div class="triple-item">
+                <img src="../img/pokedex/screen2.png" alt="Écran gauche">
+            </div>
+
+            <div class="triple-item triple-text">
+                <p>
+                    Quand on clique sur un Pokémon on accède aux informations de ce Pokémon.
+                    La couleur choisie varie en fonction du Pokémon. Il y a quatre parties : Espèces, Talents, une
+                    description un peu plus détaillée du Pokémon et Stats. En bas, il y a quatre boutons. Elle permet de
+                    se déplacer dans une des quatre parties. Le bouton tout à droite permet de revenir à la frame où on
+                    était avant.
+                </p>
+            </div>
+
+            <div class="triple-item">
+                <img src="../img/pokedex/screen3.png" alt="Écran droit">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <p>
+                    Ce composant comporte trois variantes : stats, min et max. Par défaut, il est réglé sur la variante
+                    stats. Quand l’utilisateur clique sur min ou max, une courte animation se déclenche pour faire la
+                    transition vers la variante choisie.
+                </p>
+            </div>
+
             <div class="project-image">
-                <img src="../img/pokedex_screen.png" alt="Image du projet">
+                <video autoplay muted loop playsinline>
+                    <source src="../img/pokedex/video.mp4" type="video/mp4">
+                </video>
             </div>
+        </section>
+
+        <section class="project-image-full">
+            <img src="../img/pokedex/screen4.png" alt="Écran supplémentaire du Pokédex">
         </section>
 
         <section class="project-links">
             <div>
-                <p><strong>Lien du projet :</strong> <a href="https://www.figma.com/design/ulvq4v8THYJVWOAsAXyAen/Untitled?node-id=0-1&m=dev&t=t2rhOXQZXA01Fz1a-1" target="_blank">Voir le projet</a></p>
+                <p><strong>Lien du projet :</strong>
+                    <a href="https://www.figma.com/design/ulvq4v8THYJVWOAsAXyAen/Untitled?node-id=0-1&m=dev&t=t2rhOXQZXA01Fz1a-1"
+                        target="_blank">Voir le projet</a>
+                </p>
             </div>
             <div>
                 <p><strong>Déroulé :</strong> Description détaillée du projet.</p>
@@ -58,7 +154,28 @@
         </section>
 
         <section class="see-more">
+            <h2>Voir d'autres projets</h2>
+            <div class="see-more-grid">
+                <a href="projet1.html" class="see-more-card">
+                    <img src="../img/projet1.png" alt="Projet 1">
+                    <h3>Projet 1</h3>
+                    <p>Petit texte de présentation du projet.</p>
+                </a>
+
+                <a href="projet2.html" class="see-more-card">
+                    <img src="../img/projet2.png" alt="Projet 2">
+                    <h3>Projet 2</h3>
+                    <p>Petit texte de présentation du projet.</p>
+                </a>
+
+                <a href="projet3.html" class="see-more-card">
+                    <img src="../img/projet3.png" alt="Projet 3">
+                    <h3>Projet 3</h3>
+                    <p>Petit texte de présentation du projet.</p>
+                </a>
+            </div>
         </section>
+
     </main>
 
     <footer class="site-footer">
@@ -71,6 +188,9 @@
             <p>© 2025 Melvin Mateta — Portfolio</p>
         </div>
     </footer>
+    <script src="../js/click-light.js"></script>
+    <script src="../js/burger.js"></script>
+
 </body>
 
 </html>

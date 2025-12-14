@@ -33,21 +33,26 @@ body.sonic-mode .card {
   color: #06131a;
 }
 
+body.sonic-mode .card1:hover,
+body.sonic-mode .card2:hover,
+body.sonic-mode .card3:hover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
 body.sonic-mode .card1:hover {
   background-image: url('../img/sonic1.gif');
-  background-size: cover;
 }
 
 body.sonic-mode .card2:hover {
   background-image: url('../img/sonic2.gif');
-  background-size: cover;
-  height: auto;
 }
 
 body.sonic-mode .card3:hover {
   background-image: url('../img/sonic3.gif');
-  background-size: cover;
-
+}
 }
 
 body.sonic-mode .visual-plate {

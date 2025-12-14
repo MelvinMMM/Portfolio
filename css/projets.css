@@ -49,38 +49,14 @@ body, bg-muted {
   padding: 10px 16px;
   border-radius: 999px;
   font-weight: 700;
-}
-
-.btn.primary {
-  background: linear-gradient(90deg, var(--accent), #67cfff);
-  color: #031018;
+  background-color: var(--accent);
+    color: #031018;
   box-shadow: 0 8px 30px rgba(6, 18, 30, 0.45);
 }
 
 .project-card:hover {
     transform: scale(1.02);
     transition: 0.3s ease;
-}
-
-.poke-pic{
-  background-image:
-  linear-gradient(rgba(0,0,0,0.5)),
-  url(../img/pokedex_screen.png);
-  background-size: cover;
-}
-
-.maquette-pic{
-  background-image:
-  linear-gradient(rgba(0,0,0,0.5)),
-  url(../img/maquette_screen.png);
-  background-size: cover;
-}
-
-.calcu-pic{
-  background-image:
-  linear-gradient(rgba(0,0,0,0.5)),
-  url(../img/calcu_screen.png);
-  background-size: cover;
 }
 
 .crea-logo-pic{
