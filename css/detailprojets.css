@@ -37,10 +37,6 @@ main {
   flex-flow: column nowrap;
   align-items: center;
 }
-
-img {
-  box-shadow: #130505 0px 4px 20px, #030612 0px 4px 20px;
-}
 video {
   box-shadow: #130505 0px 4px 20px, #030612 0px 4px 20px;
   border-radius: 16px;
@@ -62,6 +58,7 @@ video {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 16px;
+  flex: 1;
 }
 
 .project-video video {
@@ -70,11 +67,8 @@ video {
   display: block;
 }
 
-.project-block {
-  margin: 48px 0; /* espace au-dessus et en dessous du bloc */
-}
-
 .project-info {
+  margin: 48px 0;
   display: flex;
   gap: 32px;
   align-items: flex-start;
@@ -106,18 +100,24 @@ video {
   margin-bottom: 48px;
 }
 
+.project-image img {
+  width: 50vh;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  flex: 1;
+}
+
+.project-video,
+.project-video-text {
+  flex: 1;
+}
+
 .project-video-text {
   flex: 1;
   text-align: left;
   line-height: 1.5;
 }
-
-.project-video {
-  flex: 1;
-  max-width: 300px;
-  margin: 0;
-}
-
 
 .project-video-wrapper:nth-of-type(4) .project-video-text {
   text-align: right;
