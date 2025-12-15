@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playwrite+CA:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+:root {
+  --bg-0: #030612;
+  --bg-1: #10357a;
+  --accent: #57e6ff;
+  --muted: rgba(255, 255, 255, 0.75);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --glass: rgba(255, 255, 255, 0.04);
+  --radius: 12px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -9,6 +19,7 @@
 
 .site-header {
   position: sticky;
+  font-family: Orbitron, Inter, sans-serif;
   top: 0;
   z-index: 40;
   backdrop-filter: blur(6px);
@@ -67,7 +78,6 @@
   background: rgba(255, 255, 255, 0.03);
 }
 
-/* Bouton burger de base (caché sur desktop) */
 .burger {
   display: none;
   flex-direction: column;
@@ -90,7 +100,6 @@
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Animation en croix */
 .burger.active span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
@@ -103,7 +112,6 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Responsive : en dessous de 768px */
 @media (max-width: 768px) {
   .header-inner {
     justify-content: space-between;
@@ -131,7 +139,7 @@
   }
 
   .nav.open {
-    max-height: 200px; /* ajuste selon le nombre de liens */
+    max-height: 200px;
     opacity: 1;
   }
 }
