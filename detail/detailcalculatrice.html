@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détail Projet — Calculatrice</title>
-    <link href="../index.css" rel="stylesheet">
+    <title>Projet - Calculatrice</title>
     <link rel="stylesheet" href="../css/detailprojets.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -19,6 +18,11 @@
                 <img src="../img/logo.jpg" alt="Logo" class="brand-logo">
                 <span class="brand-name">Melvin Mateta</span>
             </a>
+            <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <a class="nav-link" href="../projets.html">Projets</a>
                 <a class="nav-link" href="../forum.html">Blog</a>
@@ -30,52 +34,161 @@
     <main class="container page">
         <section class="project-header">
             <h1>Calculatrice</h1>
-            <p class="meta">Projet</p>
+
+            <div class="project-video" style="max-width: 800px;">
+                <video id="video" autoplay muted loop playsinline>
+                    <source src="../img/calculatrice/video.mp4" type="video/mp4">
+                </video>
+            </div>
         </section>
 
         <section class="project-block">
             <div class="project-info">
-                <p><strong>Contexte :</strong> Donne le but de s'améliorer en React.js.</p>
-                <p><strong>Compétences :</strong> HTML, Bootstrap, React.js</p>
-                <p><strong>Avec qui :</strong> Melvin Mateta</p>
-                <p><strong>Quand :</strong> Août 2025</p>
+                <div class="info1">
+                    <p><strong>Compétences :</strong> HTML, CSS, BOOTSTRAP, REACT.JS</p>
+                    <p><strong>Avec qui :</strong> Melvin Mateta</p>
+                    <p><strong>Quand :</strong> Août 2025</p>
+                </div>
+                <div class="info2">
+                    C'est une calculatrice dynamique qui a le visuel d'une calculatrice casio. Parfois qu'on passe des
+                    entretiens on nous demande de faire des calculatrices en JS. Alors j'ai voulu proposer une version
+                    améliorée de la calculatrice avec du react.js.
+                </div>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <p>
+                    Tout d'abord, je définis les touches qui auront un effet sur la calculatrice :<br>
+                    - backspace pour effacer, enter pour calculer, "c" ou "C" pour effacer le calcul en cours et les
+                    numéros et les opérateurs de calcul pour les afficher sur la calculatrice
+                </p>
             </div>
 
             <div class="project-image">
-                <img src="../img/calcu_screen.png" alt="Image du projet Calculatrice">
+                <img src="../img/calculatrice/screen.png" alt="">
             </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/calculatrice/screen2.png" alt="">
+            </div>
+            <div class="project-video-text">
+                <p>
+                    Puis je dis à quoi sert les fonctions :
+                    - ajouter permet de faire une addition, effacer permet de vider setnombreafficher et calculer permet
+                    de calculer grâce à la fonction eval() qui calcule en fonction de l'opérateur qui est dans
+                    nombreafficher. Si le calcul n'est pas possible, alors ça affiche erreur
+                    <br>Const boutons permet que seuls les valeurs choisies peut être affiché. si on appuie sur "z", ça
+                    ne va pas s'afficher.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <p>
+                    Des boutons sont visibles sur la calculatrice comme "=" et "c". val est l'événement qui se passe
+                    quand on clique. Si on click sur C, sa efface. Si on click sur =, ça calcule. Si on click sur une
+                    autre touche, ça l'ajoute dans nombreafficher.
+                </p>
+            </div>
+
+            <div class="project-image">
+                <img src="../img/calculatrice/screen3.png" alt="">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/calculatrice/screen4.png" alt="">
+            </div>
+            <div class="project-video-text">
+                <p>
+                    C'est la partie visible de la calculatrice. On associe des boutons aux fonctions et on rend la
+                    calculatrice plus beau visuellement.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-image-full">
+            <img src="../img/calculatrice/screen5.png" alt="Écran supplémentaire de la calculatrice">
         </section>
 
         <section class="project-links">
-            <div>
-                <p><strong>Lien du projet :</strong>
-                    <a href="../projets/calculatrice.html" target="_blank">Voir le projet</a>
-                </p>
-                <p><strong>Repo GitHub :</strong> Aucun dépôt</p>
-            </div>
+            <a href="../projets/calculatrice.html" target="_blank">Lien du projet</a>
+            <a href="https://github.com/MelvinMMM/calculatrice.git" target="_blank">Lien du code source</a>
+        </section>
 
-            <div>
-                <p><strong>Déroulé :</strong> Description détaillée du projet.</p>
-                <p><strong>Enjeux :</strong> Quels challenges ont été relevés.</p>
-                <p><strong>Plus-value :</strong> Impact ou bénéfices du projet.</p>
+        <section class="see-more">
+            <h2>Voir d'autres projets</h2>
+            <div class="see-more-grid">
+                <a href="projet1.html" class="see-more-card">
+                    <img src="../img/projet1.png" alt="Projet 1">
+                    <h3>Projet 1</h3>
+                    <p>Petit texte de présentation du projet.</p>
+                </a>
+
+                <a href="projet2.html" class="see-more-card">
+                    <img src="../img/projet2.png" alt="Projet 2">
+                    <h3>Projet 2</h3>
+                    <p>Petit texte de présentation du projet.</p>
+                </a>
+
+                <a href="projet3.html" class="see-more-card">
+                    <img src="../img/projet3.png" alt="Projet 3">
+                    <h3>Projet 3</h3>
+                    <p>Petit texte de présentation du projet.</p>
+                </a>
             </div>
         </section>
 
-        <section class="see-more"></section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/mmateta/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-                <a href="mailto:melvin.mateta@gmail.com?subject=Demande de contact">Contactez-moi</a>
-                <a href="https://www.youtube.com/@rohaxmm6315" target="_blank" aria-label="YouTube">YouTube</a>
+                <a href="https://www.linkedin.com/in/mmateta/" target="_blank" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.32 8.16H4.7V24H.32V8.16zM8.55 8.16h4.18v2.15h.06c.58-1.1 2-2.26 4.11-2.26 4.39 0 5.2 2.89 5.2 6.65V24h-4.38v-8.16c0-1.95-.04-4.45-2.71-4.45-2.71 0-3.13 2.12-3.13 4.31V24H8.55V8.16z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="mailto:melvin.mateta@gmail.com?subject=Demande de contact" aria-label="Email">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l8 6.75 8-6.75V18H4z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="https://github.com/MelvinMMM/ton-repo-portfolio" target="_blank" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.11 3.32 9.44 7.94 10.97.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.23.7-3.91-1.56-3.91-1.56-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.76 0-1.27.46-2.31 1.21-3.12-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 2.91-.39c.99 0 1.99.13 2.92.39 2.21-1.5 3.19-1.19 3.19-1.19.63 1.59.23 2.76.11 3.05.76.81 1.21 1.85 1.21 3.12 0 4.48-2.71 5.47-5.3 5.75.42.36.8 1.09.8 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="https://www.youtube.com/@rohaxmm6315" target="_blank" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M23.5 6.2s-.23-1.64-.95-2.36c-.9-.95-1.9-.96-2.36-1.01C16.14 2.5 12 2.5 12 2.5h-.01s-4.14 0-8.19.33c-.46.05-1.46.06-2.36 1.01C.73 4.56.5 6.2.5 6.2S.25 8.16.25 10.13v1.72c0 1.97.25 3.93.25 3.93s.23 1.64.95 2.36c.9.95 2.08.92 2.61 1.02 1.9.18 7.94.32 7.94.32s4.14-.01 8.19-.34c.46-.05 1.46-.06 2.36-1.01.72-.72.95-2.36.95-2.36s.25-1.96.25-3.93v-1.72c0-1.97-.25-3.93-.25-3.93zM9.75 14.62V7.88l6.13 3.37-6.13 3.37z">
+                        </path>
+                    </svg>
+                </a>
             </div>
             <p>© 2025 Melvin Mateta — Portfolio</p>
         </div>
     </footer>
+
     <script src="../js/click-light.js"></script>
     <script src="../js/burger.js"></script>
+
 </body>
 
 </html>
