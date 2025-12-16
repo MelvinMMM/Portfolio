@@ -303,6 +303,11 @@ video {
     gap: 24px;
   }
 
+  .project-links a {
+    padding: 12px;
+    font-size: 14px;
+  }
+
   .see-more-grid {
     flex-direction: column;
     align-items: center;
@@ -319,8 +324,15 @@ video {
     margin-bottom: 32px;
   }
 
-  .project-video,
-  .project-image {
+  .project-video {
+    order: 1;
+    flex: 1;
+    width: 50%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .project-image{
     order: 1;
     flex: 1;
     width: 100%;
