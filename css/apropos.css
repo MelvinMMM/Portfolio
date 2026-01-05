@@ -10,7 +10,6 @@
 
 body {
   margin: 0;
-  font-family: Orbitron, Inter, sans-serif;
   color: #e8faff;
   background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
   min-height: 100vh;
@@ -19,19 +18,87 @@ body {
   overflow-x: hidden;
   transition: background 0.5s ease;
   position: relative;
-}
-
-.page {
-  min-height: calc(100vh - 140px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 16px;
-  margin: 0 25vh;
   font-family: IBM Plex Mono;
 }
 
 .sonicapropos{
     width: 50%;
     margin-right: 15%;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: #000;
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    touch-action: none;
+    max-width: 100%;
+}
+
+canvas {
+    background: radial-gradient(circle, #1a1a2e 0%, #000000 100%);
+    display: block;
+}
+
+.game-modal {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background: rgba(3, 6, 18, 0.95);
+    border: 2px solid var(--accent);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(87, 230, 255, 0.3);
+    color: #fff;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls-hint {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none;
+    color: var(--muted);
+}
+
+#close-modal {
+    background: var(--accent);
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+
+}
+
+@media (max-width: 768px) {
+    .game-modal {
+        width: 90%;
+        font-size: 14px;
+        padding: 15px;
+    }
+    
+    .controls-hint {
+        display: none;
+    }
 }

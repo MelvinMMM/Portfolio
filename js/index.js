@@ -1,6 +1,9 @@
 (function () {
   const switchBtn = document.getElementById('mode-switch');
   const body = document.body;
+  
+  // On sélectionne l'image du portrait
+  const portrait = document.querySelector('.portrait'); // <--- AJOUT
 
   const THEME_KEY = 'mm_theme_mode';
   const TRANSITION_CLASS = 'theme-transition';
@@ -53,6 +56,12 @@
     if (mode === 'sonic') {
       body.classList.add('sonic-mode');
 
+      // Changement de l'image et du texte alternatif
+      if(portrait) {
+        portrait.src = 'img/sonic.png'; // <--- Assure-toi que ce fichier existe !
+        portrait.alt = 'Sonic illustration';
+      }
+
       switchBtn.textContent = '💻 Mode Tech';
       switchBtn.setAttribute('aria-pressed', 'true');
 
@@ -62,6 +71,12 @@
 
     } else {
       body.classList.remove('sonic-mode');
+
+      // Retour à l'image d'origine
+      if(portrait) {
+        portrait.src = 'img/melvin.png'; // <--- L'image originale définie dans ton HTML
+        portrait.alt = 'Melvin illustration';
+      }
 
       switchBtn.textContent = '🌀 Mode Sonic';
       switchBtn.setAttribute('aria-pressed', 'false');

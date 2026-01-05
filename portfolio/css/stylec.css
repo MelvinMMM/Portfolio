@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap');
+
+body {
+    background-image: url("../img/fond.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+.calculatrice {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 200px rgba(230, 6, 6, 0.5);
+}
+
+.titre-calculatrice {
+    font-size: 4rem;
+    color: #ffffff;
+    font-family: "Playwrite CA", cursive;
+}
