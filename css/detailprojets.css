@@ -18,7 +18,6 @@ body {
 }
 
 main img {
-  border: white solid 2px;
   border-radius: 16px;
 }
 
@@ -49,10 +48,14 @@ video {
   border-radius: 16px;
 }
 
+p {
+  margin: 0 0;
+}
+
 .project-header {
   width: 100%;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +104,7 @@ video {
   display: flex;
   gap: 32px;
   align-items: center;
-  margin-bottom: 48px;
+  margin: 48px 0;
 }
 
 .project-image img {
@@ -159,18 +162,6 @@ video {
   height: auto;
 }
 
-
-.project-links a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-weight: 700;
-  background-color: var(--accent);
-  color: #031018;
-  box-shadow: 0 8px 30px rgba(6, 18, 30, 0.45);
-}
-
 .btn {
   text-decoration: none;
   display: inline-block;
@@ -184,6 +175,21 @@ video {
 
 .btn-primary {
   --bs-btn-hover-bg: var(--bg-0);
+}
+
+.project-links {
+  margin: 48px 0;
+}
+
+.project-links a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  background-color: var(--accent);
+  color: #031018;
+  box-shadow: 0 8px 30px rgba(6, 18, 30, 0.45);
 }
 
 .project-links a:hover {
@@ -271,12 +277,6 @@ video {
 .scroll-container::-webkit-scrollbar-thumb {
   background: var(--accent);
   border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-  .see-more .project-preview {
-    flex: 0 0 85%;
-  }
 }
 
 .is-hidden {
@@ -368,11 +368,15 @@ video {
     max-width: 100%;
   }
 
+  .see-more .project-preview {
+  flex: 0 0 85%;
+  }
+
   .project-video-wrapper {
     flex-direction: column;
     align-items: stretch;
     gap: 16px;
-    margin-bottom: 32px;
+    margin: 24px 0;
   }
 
   .project-video {
@@ -380,7 +384,7 @@ video {
     flex: 1;
     width: 50%;
     max-width: 320px;
-    margin: 0 auto;
+    margin: 24px 0;
   }
 
   .project-image {
