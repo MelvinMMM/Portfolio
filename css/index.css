@@ -27,7 +27,7 @@ h1 {
   font-family: Orbitron, Inter, sans-serif;
 }
 
-p {
+main {
 font-family: IBM Plex Mono;
 }
 
@@ -60,37 +60,34 @@ font-family: IBM Plex Mono;
 
 .page-left {
   max-width: 720px;
-  font-family: IBM Plex Mono;
 }
 
 .page-title {
   font-size: clamp(28px, 5.4vw, 48px);
   color: #e8faff;
-  margin: 0 0 12px;
+margin: 24px 0;
 }
 
 .page-desc {
   color: rgba(255, 255, 255, 0.75);
   font-size: 16px;
-  margin-bottom: 18px;
+margin: 24px 0;
   line-height: 1.5;
 }
 
 .cta-row {
   display: flex;
   gap: 12px;
-  margin-bottom: 18px;
+  margin: 24px 0;
 }
 
 .btn {
   text-decoration: none;
   display: inline-block;
-  padding: 10px 16px;
+  padding: 15px 32px;
   border-radius: 999px;
   font-weight: 700;
 }
-
-
 
 .btn.primary {
   background: linear-gradient(90deg, var(--accent), #67cfff);
@@ -98,8 +95,14 @@ font-family: IBM Plex Mono;
   box-shadow: 0 8px 30px rgba(6, 18, 30, 0.45);
 }
 
+.btn.primary:hover {
+  background: var(--bg-0);
+  color: var(--accent);
+  transition: 400ms;
+}
+
 .btn.ghost {
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 2px solid #e8faff;
   color: var(--muted);
   background: transparent;
 }
@@ -107,12 +110,12 @@ font-family: IBM Plex Mono;
 .meta {
   color: rgba(255, 255, 255, 0.5);
   font-size: 13px;
-  margin-bottom: 24px;
+  margin: 24px 0;
 }
 
 .sections {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 24px;           
   width: 100%;
   max-width: 800px;
@@ -231,7 +234,7 @@ font-family: IBM Plex Mono;
 
 .preview-image {
   width: 100%;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -251,16 +254,17 @@ font-family: IBM Plex Mono;
 }
 
 .preview-info h5 {
-  margin: 0 0 4px 0;
+  margin: 16px 0;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 20px;
   font-family: Orbitron, sans-serif;
 }
 
 .preview-info span {
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-family: 'IBM Plex Mono', monospace;
+  color: var(--muted);
+  font-size: 16px;
+  font-family: IBM Plex Mono;
+  margin: 16px 0;
 }
 
 .see-all-container {

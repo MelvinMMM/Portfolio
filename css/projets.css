@@ -1,4 +1,4 @@
-body, bg-muted {
+body {
   margin: 0;
   color: #e8faff;
   color: var(--muted);
@@ -16,6 +16,10 @@ h3 {
   font-family: Orbitron, Inter, sans-serif;
 }
 
+p {
+  margin: 16px 0;
+}
+
 .page a {
   text-decoration: none;
 }
@@ -28,12 +32,18 @@ h3 {
   padding: 48px 16px;
 }
 
+
 .card {
   background: var(--card-bg);
   padding: 18px;
   border-radius: var(--radius);
   transition: transform .28s ease, box-shadow .28s ease;
   cursor: default;
+  margin: 56px 0;
+}
+
+.card-body p {
+  color: var(--muted)
 }
 
 .btn {
@@ -43,9 +53,16 @@ h3 {
   border-radius: 999px;
   font-weight: 700;
   background-color: var(--accent);
-    color: #031018;
+  color: var(--bg-0);
   box-shadow: 0 8px 30px rgba(6, 18, 30, 0.45);
 }
+
+.btn-primary:hover {
+  background-color: var(--bg-0);
+  color: var(--accent);
+  transition: 400ms;
+}
+
 
 .project-card:hover {
     transform: scale(1.02);

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap');
 
 body {
-    background-image: url("../img/fond.jpg");
+    background-image: url("../img/logo.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
