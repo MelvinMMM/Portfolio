@@ -3,7 +3,7 @@
 
 :root {
   --bg-0: #030612;
-  --bg-1: #10357a;
+  --bg-1: #0a2049;
   --accent: #57e6ff;
   --muted: rgba(255, 255, 255, 0.75);
   --card-bg: rgba(255, 255, 255, 0.03);
@@ -13,6 +13,7 @@
 
 .container {
   max-width: 1200px;
+  margin-left: 0;
   margin: 0 auto;
   padding: 28px;
 }

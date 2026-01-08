@@ -25,6 +25,7 @@ h4 {
 .page {
     padding: 48px 16px;
     font-family: IBM Plex Mono;
+    text-align: center;
 }
 
 .blog-card {
