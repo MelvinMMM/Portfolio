@@ -34,8 +34,21 @@
     <main class="container page">
         <section class="project-header">
             <h1>Pokédex</h1>
-
-            <div class="project-video">
+            <div class="info1">
+                <div class="mise_en_forme">
+                    <p><strong>Compétences</strong></p>
+                    <p>Figma</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Equipe</strong></p>
+                    <p>Melvin Mateta</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Date</strong></p>
+                    <p>Juin 2025</p>
+                </div>
+            </div>
+            <div class="project-video-format-mobile">
                 <video id="video" autoplay muted loop playsinline>
                     <source src="../img/pokedex/video4.mp4" type="video/mp4">
                 </video>
@@ -43,32 +56,29 @@
         </section>
 
         <section class="project-info">
-            <div class="info1">
-                <p><strong>Compétences :</strong> Figma</p>
-                <p><strong>Avec qui :</strong> Melvin Mateta</p>
-                <p><strong>Quand :</strong> Juin 2025</p>
-            </div>
             <div class="info2">
-                C'est une interface graphique d'une app pokédex conçu sur Figma pour le format téléphone. Elle permet aux utilisateurs de rechercher
-                ces pokémon préferés, de voir leurs statistiques, types et évolutions. L'interface est intuitive et
-                colorée, rendant la navigation facile. On peut ajouter ses Pokémon en favoris ou les
-                capturer. Je me suis inspiré d'une application pour faire le design du site.
+                <h2><strong>Description</strong></h2>
+                <p>
+                    Ce projet consiste en une interface de Pokédex mobile, prototypée sous Figma. L’application offre
+                    une navigation intuitive permettant de rechercher des Pokémon, d'analyser leurs statistiques et de
+                    consulter leurs chaînes d'évolution. Le design est inspiré de plusieurs applications Pokédex
+                    mobiles.
+                </p>
             </div>
         </section>
 
         <section class="project-video-wrapper">
             <div class="project-video-text">
+                <h2>Intéraction avec la pokéball</h2>
                 <p>
-                    J'ai créé une frame qui intéragit quand on click sur la pokéball.
-                </p>
-                <p>
-                    C'est une overlay qui est fix. J'ai mis un background noir avec une opacité de 25% pour faire
-                    ressortir la frame par dessus. Quand on click à nouveau sur la pokéball, l'overlay se ferme. J'ai
-                    rajouté une animation pour faire apparaître la frame de bas en haut.
+                    J'ai implémenté un overlay qui s'active via un clic sur la Pokéball. L'arrière-plan à un
+                    calque fixe noir avec une opacité de 25 %, mettant
+                    ainsi l'accent sur le contenu au premier plan. L'affichage est enrichi par une animation de
+                    transition de bas en haut, et l'interface se referme d'un simple clic sur le déclencheur initial.
                 </p>
             </div>
 
-            <div class="project-video">
+            <div class="project-video-format-mobile">
                 <video autoplay muted loop playsinline>
                     <source src="../img/pokedex/video2.mp4" type="video/mp4">
                 </video>
@@ -76,59 +86,55 @@
         </section>
 
         <section class="project-video-wrapper">
-            <div class="project-video">
+            <div class="project-video-format-mobile">
                 <video autoplay muted loop playsinline>
                     <source src="../img/pokedex/video3.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="project-video-text">
+                <h2>Gestion de l'overlay "Version du jeu"</h2>
                 <p>
-                    J'ai créé une frame qui intéragit quand on click sur "Version du jeu".
+                    L'activation du menu déclenche l'apparition d'un overlay avec une animation de bas en haut.
+                    Cette interface dispose d'une zone de défilement pour consulter l'ensemble du contenu,
+                    tandis qu'un arrière-plan semi-transparent (opacité 25 %) isole la vue. Pour l'ergonomie, j'ai
+                    intégré une zone réactive invisible permettant de fermer l'overlay d'un simple clic à l'extérieur de
+                    la fenêtre.
                 </p>
-                <p>
-                    C'est une overlay qui peut être scroll. J'ai aussi mis un background noir avec une opacité de 25%
-                    pour faire
-                    ressortir la frame par dessus. J'ai crée un rectangle insivible au dessus de l'overlay qui s'ouvre
-                    (la partie où on voit la frame d'avant). Quand on click sur la frame d'avant, l'overlay se ferme.
-                    J'ai aussi
-                    rajouté une animation pour faire apparaître la frame de bas en haut.
-                </p>
-            </div>
-        </section>
-
-        <section class="triple-block">
-            <div class="triple-item">
-                <img src="../img/pokedex/screen2.png" alt="page info florizarre">
-            </div>
-
-            <div class="triple-item triple-text">
-                <p>
-                    Quand on clique sur un Pokémon, on accède aux informations de ce dernier.
-                    La couleur choisie varie en fonction du Pokémon. Il y a quatre parties : Espèces, Talents, une
-                    description un peu plus détaillée du Pokémon et Stats. En bas, il y a quatre boutons. Ils permettent de
-                    se déplacer dans une des quatre parties. Le bouton tout à droite permet de revenir à la frame où on
-                    était avant.
-                </p>
-            </div>
-
-            <div class="triple-item">
-                <img src="../img/pokedex/screen3.png" alt="page info dracaufeu">
             </div>
         </section>
 
         <section class="project-video-wrapper">
             <div class="project-video-text">
+                <h2>Vue détaillée du Pokémon</h2>
                 <p>
-                    Ce composant comporte trois variantes : stats, min et max. Par défaut, il est réglé sur la variante
-                    stats. Quand l’utilisateur clique sur min ou max, une courte animation se déclenche pour faire la
-                    transition vers la variante choisie.
+                    La sélection d'un Pokémon ouvre une fiche complète dont l'identité visuelle s'adapte dynamiquement à
+                    son type. Le contenu est organisé en quatre sections : Espèces, Talents, Description et
+                    Statistiques. Un menu de navigation present en bas de l'écran permet de basculer instantanément
+                    entre ces onglets, tandis que le dernier bouton est dédié à assurer un retour rapide à l'écran de
+                    navigation
+                    principal.
                 </p>
             </div>
 
+            <div class="project-image">
+                <img src="../img/pokedex/screen2.png" alt="">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
             <div class="project-video">
                 <video autoplay muted loop playsinline>
                     <source src="../img/pokedex/video.mp4" type="video/mp4">
                 </video>
+            </div>
+            <div class="project-video-text">
+                <h2>Gestion des variantes d'affichage</h2>
+                <p>
+                    Ce composant gravite autour de ses trois états : Stats (par défaut), Min et Max. Le passage entre
+                    ces
+                    variantes est accompagné par des micro-interactions animées, assurant une transition visuelle
+                    cohérente lors du changement d'état par l'utilisateur.
+                </p>
             </div>
         </section>
 
@@ -137,49 +143,54 @@
         </section>
 
         <section class="project-links">
-                    <a href="https://www.figma.com/design/ulvq4v8THYJVWOAsAXyAen/Untitled?node-id=0-1&m=dev&t=t2rhOXQZXA01Fz1a-1"
-                        target="_blank">Accéder au projet</a>
+            <a href="https://www.figma.com/design/ulvq4v8THYJVWOAsAXyAen/Untitled?node-id=0-1&m=dev&t=t2rhOXQZXA01Fz1a-1"
+                target="_blank">Accéder au projet</a>
         </section>
-
         <section class="see-more container">
             <h2 class="section-title">Voir d'autres projets</h2>
+            <div class="see-more-wrapper">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Projet précédent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-            <div class="see-more-grid scroll-container">
-                <a href="detailmaquette.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/maquette_screen.png" alt="Générateur de Maquette">
-                    </div>
-                    <div class="preview-info">
-                        <h5>Générateur de Maquette</h5>
-                        <span>Un générateur de maquette type site web</span>
-                    </div>
-                </a>
+                <div class="see-more-grid scroll-container" id="projectScroll">
+                    <a href="detailmaquette.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/maquette_screen.png" alt="Générateur de Maquette">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Générateur de Maquette</h5>
+                            <span>Un générateur de maquette type site web</span>
+                        </div>
+                    </a>
 
-                <a href="detailtcta.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/tcta/tcta_screen_rec.png" alt="Soundtrack">
-                    </div>
-                    <div class="preview-info">
-                        <h5>The Chronicles of The Abyss</h5>
-                        <span>Venez découvrir la soundtrack du projet.</span>
-                    </div>
-                </a>
+                    <a href="detailtcta.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/tcta/tcta_screen_rec.png" alt="Soundtrack">
+                        </div>
+                        <div class="preview-info">
+                            <h5>The Chronicles of The Abyss</h5>
+                            <span>Venez découvrir la soundtrack du projet.</span>
+                        </div>
+                    </a>
 
-                <a href="detailcalculatrice.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/calculatrice/calcu_screen_rec.png" alt="Calculatrice">
-                    </div>
-                    <div class="preview-info">
-                        <h5>Calculatrice</h5>
-                        <span>Une calculatrice Casio complet</span>
-                    </div>
-                </a>
-                
+                    <a href="detailcalculatrice.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/calculatrice/calcu_screen_rec.png" alt="Calculatrice">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Calculatrice</h5>
+                            <span>Une calculatrice Casio complet</span>
+                        </div>
+                    </a>
+                </div>
+
+                <button class="nav-arrow right" id="nextBtn" aria-label="Projet suivant">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </section>
-
     </main>
-
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="social-icons">
@@ -220,6 +231,7 @@
     </footer>
     <script src="../js/click-light.js"></script>
     <script src="../js/burger.js"></script>
+    <script src="../js/scroll-projects.js"></script>
 
 </body>
 

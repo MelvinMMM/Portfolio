@@ -85,7 +85,7 @@ margin: 24px 0;
   text-decoration: none;
   display: inline-block;
   padding: 15px 32px;
-  border-radius: 999px;
+  border-radius: 100px;
   font-weight: 700;
 }
 
@@ -93,12 +93,14 @@ margin: 24px 0;
   background: linear-gradient(90deg, var(--accent), #67cfff);
   color: #031018;
   box-shadow: 0 8px 30px rgba(6, 18, 30, 0.45);
+  border: var(--accent) 2px solid;
 }
 
 .btn.primary:hover {
   background: var(--bg-0);
   color: var(--accent);
   transition: 400ms;
+  border: var(--accent) 2px solid;
 }
 
 .btn.ghost {
@@ -114,27 +116,25 @@ margin: 24px 0;
 }
 
 .sections {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   gap: 24px;           
   width: 100%;
-  max-width: 800px;
-  margin-top: 12px;
+  max-width: 1100px;
+  margin-top: 48px;
 }
 
 .card {
   background: var(--card-bg);
-  padding: 48px 32px;
+  padding: 32px 24px;
   border-radius: var(--radius);
   transition: transform .28s ease, box-shadow .28s ease;
-  cursor: default;
-  
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 200px;     
+  min-height: 180px;     
 }
 
 .card h4 {
@@ -310,28 +310,54 @@ margin: 24px 0;
 }
 
 @media (max-width:980px) {
+
+  .btn {
+    font-size: 12px;
+  }
+
+  .bloc {
+    padding: 24px 16px; 
+    gap: 40px;
+  }
+
   .page {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .page-left {
+    max-width: 100%;
+  }
+
+  .cta-row {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .page-right {
     order: -1;
-    height: 280px;
+    height: auto;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .portrait {
+    width: 100%;
+    height: auto;
+    transform: rotate(0deg);
   }
 
   .sections {
     grid-template-columns: 1fr;
+    margin-top: 24px;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
-  .preview-image {
-    height: 180px;
-  }
 
-  .btn {
-    font-size: 12px;
+  .preview-image {
+    height: 200px;
   }
 }
+

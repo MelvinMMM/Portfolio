@@ -34,33 +34,47 @@
     <main class="container page">
         <section class="project-header">
             <h1>The Chronicles of The Abyss</h1>
-
+            <div class="info1">
+                <div class="mise_en_forme">
+                    <p><strong>Compétences</strong></p>
+                    <p>LMMS</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Equipe</strong></p>
+                    <p>Melvin Mateta</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Date</strong></p>
+                    <p>Septembre 2024</p>
+                </div>
+            </div>
             <div class="project-image" style="max-width: 800px;">
                 <img src="../img/tctascreen.png" alt="">
             </div>
         </section>
 
-        <section class="project-block">
-            <div class="project-info">
-                <div class="info1">
-                    <p><strong>Compétences :</strong> LMMS</p>
-                    <p><strong>Avec qui :</strong> Melvin Mateta</p>
-                    <p><strong>Quand :</strong> Septembre 2024</p>
-                </div>
-                <div class="info2">
-                    C'est la soundtrack d'un jeu fictif du nom de The Chronicle of The Abyss. Le but était de voir si je
-                    pouvais des musiques pour un petit jeu. Pour un total de 22 musiques incluant des musique du début
-                    du jeu, des boss, des niveaux et des endroits.
-                </div>
+        <section class="project-info">
+            <div class="info2">
+                <h2><strong>Description</strong></h2>
+                <p>
+                    Ce projet regroupe la bande originale de The Chronicle of The Abyss, un titre fictif pour lequel
+                    j'ai conçu un univers sonore complet. L'objectif était de tester ma capacité à sonoriser un jeu
+                    vidéo à travers 22 compositions originales. La playlist couvre l'ensemble de l'expérience joueur,
+                    incluant les thèmes d'introduction, les ambiances de niveaux, les musiques d'exploration ainsi que
+                    les thèmes épiques dédiés aux combats de boss.
+                </p>
             </div>
         </section>
 
         <section class="project-video-wrapper">
             <div class="project-video-text">
+                <h2>Thème d'introduction – "Let's Start"</h2>
                 <p>
-                    Voici la première musique du jeu se nommant "Let's Start".
-                    Le début commence assez tranquillement avec une guitare classique et un whistle. Ensuite ça devient
-                    plus dynamique en rajoutant bright lead et strings. Ça boucle en répétant le même schéma.
+                    Cette première composition pose les bases de l'aventure avec une ouverture apaisante mêlant guitare
+                    classique et whistle (sifflement). Le morceau gagne ensuite en intensité avec l'introduction d'un
+                    bright lead et strings, apportant une dynamique plus entraînante. La
+                    structure est conçue en boucle, permettant une immersion fluide et continue durant les premières
+                    phases du jeu.
                 </p>
             </div>
 
@@ -84,20 +98,24 @@
                 </audio>
             </div>
             <div class="project-video-text">
+                <h2>Thème de combat – "Mini Boss (Monsters)"</h2>
                 <p>
-                    Voici "Mini Boss (Monsters)", une musique pour les mini boss quand nous nous battons contre des
-                    monstres. Ici, je me suis principalement concentré sur des sons synthétiques comme des leads, un
-                    piano électrique, en rajoutant une petite touche de douceur avec une harpe.
+                    Ce morceau est dédié aux affrontements contre les créatures intermédiaires. J'ai privilégié une
+                    texture sonore synthétique, portée par des leads énergiques et un piano électrique, tout en
+                    intégrant une harpe pour apporter une subtile touche de douceur. Ce contraste souligne la tension du
+                    combat tout en conservant la signature mélodique du jeu.
                 </p>
             </div>
         </section>
 
         <section class="project-video-wrapper">
             <div class="project-video-text">
+                <h2>Thème de combat – "Mini Boss (Soldats)"</h2>
                 <p>
-                    Ensuite "Mini Boss (Soldats)", une musique pour les mini boss quand nous nous battons contre des
-                    soldats. Le rythme est beaucoup plus rapide avec l'utilisation de guitare électrique pour appeler le
-                    côté armée.
+                    Dédiée aux affrontements contre les unités militaires, cette composition adopte un tempo soutenu
+                    pour refléter l'urgence du combat. L'intégration de guitares électriques apporte une sonorité
+                    martiale et énergique, évoquant la puissance d'une armée organisée et renforçant la tension
+                    dramatique de ces rencontres.
                 </p>
             </div>
 
@@ -121,10 +139,13 @@
                 </audio>
             </div>
             <div class="project-video-text">
+                <h2>Thème de Boss Final – "Jack Harrington"</h2>
                 <p>
-                    Et voici "Jack Harrington Sergeant Major of the Army Boss" la musique du boss final des soldats.
-                    J'ai rajouté des choirs pour rendre le tout épique.
-                    J'ai gardé ce côte armée avec la guitare électrique plus le mélange des leads.
+                    Cette composition marque l'apogée des affrontements militaires. Pour souligner l'importance du
+                    Sergent-Major, j'ai enrichi l'instrumentation avec des chœurs orchestraux (choirs), conférant au
+                    morceau une dimension épique et magistrale. On y retrouve l'identité martiale établie par les
+                    guitares électriques, ici fusionnées à des textures de leads complexes pour intensifier la tension
+                    finale.
                 </p>
             </div>
         </section>
@@ -141,36 +162,44 @@
 
         <section class="see-more container">
             <h2 class="section-title">Voir d'autres projets</h2>
+            <div class="see-more-wrapper">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Projet précédent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-            <div class="see-more-grid scroll-container">
+                <div class="see-more-grid scroll-container" id="projectScroll">
 
-                <a href="detailcalculatrice.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/calculatrice/calcu_screen_rec.png" alt="Calculatrice">
-                    </div>
-                    <div class="preview-info">
-                        <h5>Calculatrice</h5>
-                        <span>Une calculatrice Casio complet</span>
-                    </div>
-                </a>
-                <a href="detaillogo.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/seikan.png" alt="Seikan">
-                    </div>
-                    <div class="preview-info">
-                        <h5>Seikan</h5>
-                        <span>Marque de vin écologique</span>
-                    </div>
-                </a>
-                <a href="detailmaquette.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/maquette_screen.png" alt="Générateur de Maquette">
-                    </div>
-                    <div class="preview-info">
-                        <h5>Générateur de Maquette</h5>
-                        <span>Un générateur de maquette type site web</span>
-                    </div>
-                </a>
+                    <a href="detailcalculatrice.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/calculatrice/calcu_screen_rec.png" alt="Calculatrice">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Calculatrice</h5>
+                            <span>Une calculatrice Casio complet</span>
+                        </div>
+                    </a>
+                    <a href="detaillogo.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/seikan.png" alt="Seikan">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Seikan</h5>
+                            <span>Marque de vin écologique</span>
+                        </div>
+                    </a>
+                    <a href="detailmaquette.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/maquette_screen.png" alt="Générateur de Maquette">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Générateur de Maquette</h5>
+                            <span>Un générateur de maquette type site web</span>
+                        </div>
+                    </a>
+                </div>
+                <button class="nav-arrow right" id="nextBtn" aria-label="Projet suivant">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </section>
 
@@ -217,7 +246,7 @@
 
     <script src="../js/click-light.js"></script>
     <script src="../js/burger.js"></script>
-
+    <script src="../js/scroll-projects.js"></script>
 </body>
 
 </html>
