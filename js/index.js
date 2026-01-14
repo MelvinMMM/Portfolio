@@ -74,7 +74,7 @@
 
       // Retour à l'image d'origine
       if(portrait) {
-        portrait.src = 'img/melvin.png'; // <--- L'image originale définie dans ton HTML
+        portrait.src = 'img/melvin3.png'; // <--- L'image originale définie dans ton HTML
         portrait.alt = 'Melvin illustration';
       }
 

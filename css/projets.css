@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   color: #e8faff;
@@ -12,12 +14,17 @@ body {
   font-family: IBM Plex Mono;
 }
 
-h3 {
+h2 {
   font-family: Orbitron, Inter, sans-serif;
+  margin: 0 0;
 }
 
 p {
   margin: 16px 0;
+}
+
+h3 {
+  margin: 0 !important;
 }
 
 .page a {
@@ -39,7 +46,7 @@ p {
   border-radius: var(--radius);
   transition: transform .28s ease, box-shadow .28s ease;
   cursor: default;
-  margin: 56px 0;
+  margin: 28px 0;
 }
 
 .card-body p {
@@ -55,12 +62,14 @@ p {
   background-color: var(--accent);
   color: var(--bg-0);
   box-shadow: 0 8px 30px rgba(6, 18, 30, 0.45);
+  border: var(--accent) 2px solid;
 }
 
 .btn-primary:hover {
   background-color: var(--bg-0);
   color: var(--accent);
   transition: 400ms;
+  border: var(--accent) 2px solid;
 }
 
 

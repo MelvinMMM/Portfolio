@@ -6,20 +6,17 @@ const modalDesc = document.getElementById('modal-desc');
 const closeBtn = document.getElementById('close-modal');
 const gameContainer = document.querySelector('.game-container');
 
-// --- 🖼️ CONFIGURATION IMAGE DU JOUEUR ---
 const playerImage = new Image();
 playerImage.src = 'img/logo.png';
 
-// --- 🎵 CONFIGURATION AUDIO ---
 const bgMusic = new Audio('music/game-music.mp3');
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
 
 const sfxOpen = new Audio('music/open-sound.mp3');
 const sfxClose = new Audio('music/close-sound.mp3');
-const sfxSecret = new Audio('music/open-sound.mp3'); // Tu peux mettre un son différent pour le secret si tu veux
+const sfxSecret = new Audio('music/open-sound.mp3');
 
-// LE JOUEUR
 const player = {
     x: 0,
     y: 0,
@@ -35,11 +32,10 @@ playerImage.onload = () => {
     player.isLoaded = true;
 };
 
-// LES ZONES D'INFO
 const zones = [
     {
         id: 'dev',
-        type: 'info', // C'est une info normale
+        type: 'info',
         color: '#ffcc00',
         title: "Dev Web",
         desc: "Étudiant en 2ème année à DECODE Paris. HTML, CSS, JS, PHP, Bootstrap, React.js, Symfony & Wordpress.",
@@ -50,7 +46,7 @@ const zones = [
         type: 'info',
         color: '#ff5757',
         title: "Musique",
-        desc: "Je compose de la musique quand je ne code pas. Je sais faire des musiques de jeux vidéo style rétro, rock, métal, trap, jazz et électro. Le but est de pouvoir rendre mes sites plus unique en rajoutant une touche musicale par-dessus. Par exemple je peux créer un site pour accueillir un jeu et la personnaliser en créant des musiques.",
+        desc: "Compositeur de musiques de jeux (rétro, rock, métal, jazz, électro) pour créer des univers web uniques.",
         visited: false
     },
     {
@@ -66,10 +62,9 @@ const zones = [
         type: 'info',
         color: '#bd57ff',
         title: "Contact",
-        desc: "Pour un job étudiant, dispo Vendredi/Samedi/Dimanche. Pour un stage dispo à partir d'avril. Pour une alternance, dispo à partir de septembre 2026. melvin.mateta@gmail.com",
+        desc: "Disponible pour des projets freelance en dev web & composition musicale. N'hésitez pas à me contacter !",
         visited: false
     },
-    // --- 🕵️ LE BLOC SECRET (CV) ---
     {
         id: 'cv_secret',
         type: 'link',
@@ -82,7 +77,6 @@ const zones = [
 let isModalOpen = false;
 let musicStarted = false;
 
-// --- RESPONSIVE ---
 function resizeGame() {
     canvas.width = gameContainer.clientWidth;
     canvas.height = gameContainer.clientHeight;
@@ -90,11 +84,9 @@ function resizeGame() {
     const pad = 20;
     const boxSize = 50;
 
-    // Joueur au centre
     player.x = (canvas.width / 2) - (player.w / 2);
     player.y = (canvas.height / 2) - (player.h / 2);
 
-    // Positions des 4 blocs normaux
     zones[0].x = canvas.width * 0.15; zones[0].y = canvas.height * 0.15;
     zones[0].w = boxSize; zones[0].h = boxSize;
 
@@ -107,9 +99,8 @@ function resizeGame() {
     zones[3].x = canvas.width * 0.85 - boxSize; zones[3].y = canvas.height * 0.85 - boxSize;
     zones[3].w = boxSize; zones[3].h = boxSize;
 
-    // Position du BLOC SECRET (Tout en haut à droite, collé au coin)
-    zones[4].x = canvas.width - 60; // Juste un peu décalé du bord droit
-    zones[4].y = 10; // Juste un peu décalé du haut
+    zones[4].x = canvas.width - 60;
+    zones[4].y = 10;
     zones[4].w = 50;
     zones[4].h = 50;
 }
@@ -178,13 +169,10 @@ function openModal(zone) {
 }
 
 function openLink(zone) {
-    // Joue un son
     sfxSecret.currentTime = 0; sfxSecret.play();
 
-    // Ouvre le CV dans un nouvel onglet
     window.open(zone.url, '_blank');
 
-    // On remet le joueur au centre pour ne pas qu'il réouvre le lien en boucle
     player.x = (canvas.width / 2) - (player.w / 2);
     player.y = (canvas.height / 2) - (player.h / 2);
     player.dx = 0; player.dy = 0;
@@ -208,24 +196,18 @@ function checkCollision(rect1, rect2) {
     );
 }
 
-// BOUCLE DU JEU
 function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // 1. Dessiner les zones
     zones.forEach(zone => {
-        // Logique de dessin différente si c'est le bloc SECRET
         if (zone.type === 'link') {
-            // Bloc quasi invisible (fantomatique)
             ctx.fillStyle = zone.color;
             ctx.fillRect(zone.x, zone.y, zone.w, zone.h);
 
-            // Pas de "?" ni de titre, juste une bordure très fine pour que TOI tu saches qu'il est là
             ctx.strokeStyle = "rgba(255,255,255,0.1)";
             ctx.strokeRect(zone.x, zone.y, zone.w, zone.h);
         }
         else {
-            // BLOCS NORMAUX
             ctx.fillStyle = zone.color;
             ctx.shadowBlur = 15;
             ctx.shadowColor = zone.color;
@@ -245,7 +227,6 @@ function update() {
         }
     });
 
-    // 2. Mouvement Joueur
     if (!isModalOpen) {
         player.dx = 0; player.dy = 0;
 
@@ -277,7 +258,6 @@ function update() {
         if (player.y + player.h > canvas.height) player.y = canvas.height - player.h;
     }
 
-    // 3. Dessin Joueur
     if (player.isLoaded) {
         ctx.shadowBlur = 15; ctx.shadowColor = '#57e6ff';
         ctx.drawImage(playerImage, player.x, player.y, player.w, player.h);
@@ -286,14 +266,11 @@ function update() {
         ctx.fillStyle = '#57e6ff'; ctx.fillRect(player.x, player.y, player.w, player.h);
     }
 
-    // 4. Collisions
     zones.forEach(zone => {
         if (checkCollision(player, zone) && !isModalOpen) {
-            // SI c'est un lien (CV), on l'ouvre
             if (zone.type === 'link') {
                 openLink(zone);
             }
-            // SINON c'est une info classique
             else {
                 openModal(zone);
             }

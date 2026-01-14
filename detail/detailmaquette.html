@@ -34,34 +34,49 @@
     <main class="container page">
         <section class="project-header">
             <h1>Générateur de maquette</h1>
-
-            <div class="project-video" style="max-width: 800px;">
+            <div class="info1">
+                <div class="mise_en_forme">
+                    <p><strong>Compétences</strong></p>
+                    <p>HTML, CSS<br>BOOTSTRAP, JS</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Equipe</strong></p>
+                    <p>Melvin Mateta<br>Rayane Amrani</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Date</strong></p>
+                    <p>Mai 2025</p>
+                </div>
+            </div>
+            <div class="project-video">
                 <video id="video" autoplay muted loop playsinline>
                     <source src="../img/maquette/video.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
 
-        <section class="project-block">
-            <div class="project-info">
-                <div class="info1">
-                    <p><strong>Compétences :</strong> HTML, CSS, BOOTSTRAP, JS</p>
-                    <p><strong>Avec qui :</strong> Melvin Mateta et Rayane Amrani</p>
-                    <p><strong>Quand :</strong> Mai 2025</p>
-                </div>
-                <div class="info2">
-                    C'est un générateur de maquette qui permet de placer des éléments tels que des boutons, des badges ou
-                    une barre de progression. Utile si on veut faire des générateurs de x choses.
-                </div>
+        <section class="project-info">
+            <div class="info2">
+                <h2><strong>Description</strong></h2>
+                <p>
+                    Cet outil permet de concevoir des interfaces en disposant dynamiquement des composants tels que des
+                    boutons, des badges ou des barres de progression. Le workflow repose sur un système de
+                    "drag-and-drop"
+                    depuis un menu latéral gauche vers l'espace de travail.
+                    Techniquement, le rendu visuel s'appuie sur le framework Bootstrap, tandis que la logique de
+                    positionnement et l'interactivité sont gérées en JavaScript.
+                </p>
             </div>
         </section>
 
         <section class="project-video-wrapper">
             <div class="project-video-text">
+                <h2>Positionnement et précision</h2>
                 <p>
-                    En haut à droite, on peut voir la position du bloc qu'on met sur l'écran dans une dimension x et y. On peut
-                    déplacer le bloc avec les touches directionnelles si on veut être plus précis. On peut voir que les
-                    valeurs changent car elle capture la valeur exacte du bloc.
+                    Un indicateur situé en haut à droite affiche en temps réel des coordonnées X et Y du composant
+                    sélectionné. Pour un ajustement de haute précision, l'utilisateur peut déplacer l'élément à l'aide
+                    des touches directionnelles du clavier. L'interface met à jour dynamiquement ces valeurs en
+                    capturant la position exacte du bloc à chaque itération.
                 </p>
             </div>
 
@@ -70,22 +85,20 @@
             </div>
         </section>
 
-        <section class="triple-block">
-            <div class="triple-item">
-                <img src="../img/maquette/screen2.png" alt="Écran gauche">
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/maquette/screen2.png" alt="">
+                <img src="../img/maquette/screen3.png" alt="">
             </div>
-
-            <div class="triple-item triple-text">
+            <div class="project-video-text">
+                <h2>Validation et finalisation</h2>
                 <p>
-                    Après avoir placé tous les blocs sur l'écran, un bouton apparaît en bas à gauche pour savoir si on a
-                    terminé. Après avoir cliqué dessus, on ne peut plus bouger les éléments et un message apparaît en
-                    bas de l'écran qui nous dit que nous avons terminé l'exercice. Tout ce qui est lié au déplacement
-                    des blocs est fait avec JS et les blocs sont faits avec Bootstrap.
+                    Une fois la mise en page terminée, un bouton de confirmation apparaît en bas à gauche de
+                    l'interface. Sa validation verrouille le positionnement de tous les composants et déclenche un
+                    message confirmant la réussite de l'exercice. Cette logique de verrouillage et de gestion d'état est
+                    entièrement fait en JavaScript, tandis que les composants visuels exploitent le framework
+                    Bootstrap.
                 </p>
-            </div>
-
-            <div class="triple-item">
-                <img src="../img/maquette/screen3.png" alt="Écran droit">
             </div>
         </section>
 
@@ -100,38 +113,46 @@
 
         <section class="see-more container">
             <h2 class="section-title">Voir d'autres projets</h2>
+            <div class="see-more-wrapper">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Projet précédent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-            <div class="see-more-grid scroll-container">
-                <a href="detailpokedex.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/pokedex/screen.png" alt="Pokédex">
-                    </div>
-                    <div class="preview-info">
-                        <h5>Pokédex</h5>
-                        <span>UX d'une application mobile sur un pokédex</span>
-                    </div>
-                </a>
+                <div class="see-more-grid scroll-container" id="projectScroll">
+                    <a href="detailpokedex.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/pokedex/screen.png" alt="Pokédex">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Pokédex</h5>
+                            <span>UX d'une application mobile sur un pokédex</span>
+                        </div>
+                    </a>
 
-                <a href="detaillogo.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/seikan.png" alt="Seikan">
-                    </div>
-                    <div class="preview-info">
-                        <h5>Seikan</h5>
-                        <span>Marque de vin écologique</span>
-                    </div>
-                </a>
+                    <a href="detaillogo.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/seikan.png" alt="Seikan">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Seikan</h5>
+                            <span>Marque de vin écologique</span>
+                        </div>
+                    </a>
 
-                <a href="detailcalculatrice.html" class="project-preview">
-                    <div class="preview-image">
-                        <img src="../img/calculatrice/calcu_screen_rec.png" alt="Calculatrice">
-                    </div>
-                    <div class="preview-info">
-                        <h5>Calculatrice</h5>
-                        <span>Une calculatrice Casio complet</span>
-                    </div>
-                </a>
-                
+                    <a href="detailcalculatrice.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/calculatrice/calcu_screen_rec.png" alt="Calculatrice">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Calculatrice</h5>
+                            <span>Une calculatrice Casio complet</span>
+                        </div>
+                    </a>
+
+                </div>
+                <button class="nav-arrow right" id="nextBtn" aria-label="Projet suivant">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </section>
 
@@ -177,7 +198,7 @@
     </footer>
     <script src="../js/click-light.js"></script>
     <script src="../js/burger.js"></script>
-
+    <script src="../js/scroll-projects.js"></script>
 </body>
 
 </html>
