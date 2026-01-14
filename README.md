@@ -1,4 +1,4 @@
-# Portfolio de Melvin Mateta v2.2.0
+# Portfolio de Melvin Mateta v2.2.1
 
 > **"Codeur ultra-rapide & créatif"**
 > Optimisation, composition et interfaces soignées — je conçois des sites web rapides et accessibles.
