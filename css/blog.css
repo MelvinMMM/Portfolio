@@ -1,12 +1,3 @@
-:root {
-    --bg-0: #030612;
-    --bg-1: #10357a;
-    --accent: #57e6ff;
-    --muted: rgba(255, 255, 255, 0.75);
-    --card-bg: rgba(255, 255, 255, 0.04);
-    --radius: 14px;
-}
-
 body {
     margin: 0;
     font-family: Orbitron, Inter, sans-serif;

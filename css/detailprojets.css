@@ -430,9 +430,6 @@ p {
     gap: 16px;
   }
 
-}
-
-@media (max-width: 768px) {
   .nav-arrow {
     display: none;
   }
@@ -440,4 +437,5 @@ p {
     display: flex;
     overflow-x: auto;
   }
+
 }
