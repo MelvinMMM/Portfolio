@@ -22,3 +22,29 @@ window.addEventListener('mousedown', (event) => {
     setTimeout(() => p.remove(), 200);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Création de la popup (HTML généré dynamiquement)
+    const lightbox = document.createElement("div");
+    lightbox.className = "lightbox-overlay";
+    
+    const lightboxImage = document.createElement("img");
+    lightbox.appendChild(lightboxImage);
+    document.body.appendChild(lightbox);
+
+    // 2. Cibler les images (Ici, toutes les images dans tes conteneurs .project-image)
+    const images = document.querySelectorAll(".project-image img, .project-image-full img");
+
+    // 3. Ajouter l'événement de clic sur chaque image
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            lightboxImage.src = img.src; // Récupère la source de l'image cliquée
+            lightbox.classList.add("active"); // Affiche la popup
+        });
+    });
+
+    // 4. Fermer la popup quand on clique n'importe où dessus
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+    });
+});

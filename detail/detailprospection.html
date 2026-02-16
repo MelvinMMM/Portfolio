@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet - Écosystème No-Code & IA</title>
+    <link rel="stylesheet" href="../css/detailprojets.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="Image/png" href="../img/logo.png">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" class="brand-logo">
+                <span class="brand-name">Melvin Mateta</span>
+            </a>
+            <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <a class="nav-link" href="../projets.html">Projets</a>
+                <a class="nav-link" href="../forum.html">Blog</a>
+                <a class="nav-link" href="../apropos.html">A propos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page">
+        <section class="project-header">
+            <h1>Outil de Prospection</h1>
+            <div class="info1">
+                <div class="mise_en_forme">
+                    <p><strong>Compétences</strong></p>
+                    <p>Framer, Airtable, Zapier</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Equipe</strong></p>
+                    <p>Melvin Mateta</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Date</strong></p>
+                    <p>Février 2026</p>
+                </div>
+            </div>
+            <div class="project-video">
+                <video id="video" autoplay muted loop playsinline>
+                    <source src="../img/prospection/video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="info2">
+                <h2><strong>Description</strong></h2>
+                <p>
+                    J'ai développé un écosystème d'automatisation Full-Stack No-Code pour la gestion de mes projets
+                    freelance.
+                    L'objectif était de supprimer totalement la phase administrative manuelle du démarrage de projet.
+                    Ce système relie un site vitrine dynamique (Framer) à un CRM sur-mesure (Airtable), le tout
+                    orchestré par
+                    des workflows intelligents (Zapier) intégrant de l'Intelligence Artificielle générative.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/prospection/tables.png" alt="Les tables Airtable">
+            </div>
+            <div class="project-video-text">
+                <h2>Base de données Airtable</h2>
+                <p>
+                    Le socle de ce projet repose sur une base centralisée. L'information est structurée autour de trois
+                    tables principales :
+                    "Mes Services" qui agit comme un CMS dynamique pour le site web, "Demandes de Projets" qui recueille
+                    les gros devis,
+                    et "Contact" pour gérer les requêtes simples et assurer le suivi de mes candidatures grâce à un
+                    système de relance automatisé.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Formulaires intégrés</h2>
+                <p>
+                    Pour alimenter la base de données sans friction, j'ai conçu des formulaires Airtable optimisés.
+                    Ils permettent de qualifier précisément le besoin du prospect (design, web, musique) avant même le
+                    premier contact.
+                    Ces formulaires sont le point d'entrée qui déclenche toute la machinerie d'automatisation en
+                    arrière-plan.
+                </p>
+            </div>
+            <div class="project-image">
+                <img src="../img/prospection/form.png" alt="Les formulaires Airtable">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/prospection/backoffice.png" alt="Back-office Airtable">
+            </div>
+            <div class="project-video-text">
+                <h2>Interface Back-office</h2>
+                <p>
+                    Afin de piloter mon activité de freelance efficacement, j'ai mis en place une interface
+                    personnalisée sur Airtable.
+                    Ce tableau de bord me permet de visualiser d'un coup d'œil l'état d'avancement de chaque projet et
+                    d'exploiter
+                    pleinement mon CRM personnel, sans me perdre dans des lignes de tableur.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Automatisations des status</h2>
+                <p>
+                    En complément de Zapier, j'ai configuré des automatisations natives directement dans Airtable pour
+                    gérer la communication et le cycle de vie des projets. Le système est réactif aux changements : la
+                    création d'un nouveau contact déclenche des notifications automatiques. De même, le passage d'un
+                    projet au statut "En cours" génère un email de suivi, et lorsqu'il passe en "Fini", le système
+                    envoie une alerte de fin de mission tout en horodatant automatiquement la date de clôture dans la
+                    base de données
+                </p>
+            </div>
+            <div class="project-image">
+                <img src="../img/prospection/airtableauto.png" alt="Automatisation Airtable">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/prospection/Demande de projet.png" alt="Automatisation Zapier - Demande">
+            </div>
+            <div class="project-video-text">
+                <h2>Analyse des demandes via Zapier</h2>
+                <p>
+                    Dès l'arrivée d'une nouvelle demande de projet dans Airtable, ce premier Zap s'active. Une
+                    Intelligence Artificielle (AI by Zapier) analyse d'abord le contenu de la requête, suivie d'un
+                    module "Formatter" pour structurer les données chiffrées (comme le budget). Ensuite, le flux utilise
+                    la logique "Paths" pour se séparer en deux scénarios possibles. Selon le cas, le système prépare
+                    automatiquement un brouillon d'e-mail de réponse dans Gmail et met à jour le statut du client dans
+                    Airtable.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Génération de projet par l'IA</h2>
+                <p>
+                    Ce second Zap est dédié à la préparation opérationnelle. Lorsqu'une ligne est mise à jour, le
+                    workflow catégorise le projet en trois chemins distincts : Site Web, Musique ou Design. En fonction
+                    de la catégorie, une IA est invoquée pour générer un contenu spécifique au domaine (pré-cahier des
+                    charges, pistes créatives, etc.). Enfin, ce texte brut est automatiquement converti en fichier et
+                    sauvegardé dans le bon dossier sur mon Google Drive, me fournissant une base de travail immédiate.
+                </p>
+            </div>
+            <div class="project-image">
+                <img src="../img/prospection/Création du projet by ia.png" alt="Automatisation Zapier - IA">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/prospection/accueil.png" alt="Page d'accueil Framer">
+            </div>
+            <div class="project-video-text">
+                <h2>Page d'accueil (Framer)</h2>
+                <p>
+                    La page "Devis" est le point d'entrée principal pour les nouveaux projets. Pour relier le frontend à
+                    mon backend de manière fluide, j'ai utilisé le composant "Embed" de Framer afin d'y intégrer
+                    directement le grand formulaire généré sur Airtable. Grâce à cette intégration transparente, le
+                    visiteur reste immergé dans l'univers visuel du site, tandis que ses réponses partent instantanément
+                    dans ma base de données pour déclencher toute la chaîne d'automatisation Zapier et l'IA.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Page Mes Services (CMS)</h2>
+                <p>
+                    Sur le même principe technique, la page de contact a été pensée pour les requêtes plus simples et
+                    rapides. J'y ai intégré (toujours via Embed) le second formulaire Airtable, spécifiquement relié à
+                    ma table "Contact". Cette méthode m'évite de devoir gérer un backend complexe sur le site : chaque
+                    message posté depuis Framer arrive directement, et de manière parfaitement structurée, dans mon CRM
+                    personnel.
+                </p>
+            </div>
+            <div class="project-image">
+                <img src="../img/prospection/services.png" alt="Page CMS Services">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/prospection/devis.png" alt="Page Devis Framer">
+            </div>
+            <div class="project-video-text">
+                <h2>Page Devis</h2>
+                <p>
+                    Conçue pour maximiser l'acquisition de leads, la page Devis intègre de manière transparente le
+                    formulaire
+                    Airtable principal (Embed). Le client reste immergé dans l'univers graphique du site tout en
+                    fournissant
+                    les données structurées nécessaires pour déclencher toute la chaîne d'automatisation Zapier et l'IA.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Page Contact</h2>
+                <p>
+                    Pour les requêtes simples ou les échanges rapides, une page de contact épurée a été mise en place.
+                    Elle intègre un second formulaire, directement relié à la table de suivi de mon CRM pour assurer
+                    une gestion de la clientèle réactive, sans déclencher la machinerie lourde de la création de projet.
+                </p>
+            </div>
+            <div class="project-image">
+                <img src="../img/prospection/contact.png" alt="Page Contact Framer">
+            </div>
+        </section>
+
+
+        <section class="project-links">
+            <a href="https://coral-experience-573792.framer.app" target="_blank">Visiter le site Framer</a>
+            <a href="../img/prospection/videopresentation.mp4" target="_blank">Visionner la vidéo de présentation</a>
+        </section>
+
+        <section class="see-more container">
+            <h2 class="section-title">Voir d'autres projets</h2>
+            <div class="see-more-wrapper">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Projet précédent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="see-more-grid scroll-container" id="projectScroll">
+                    <a href="detailportfolio.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/portfolio-wp/rec_screen.png" alt="Portfolio WP">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Portfolio WordPress</h5>
+                            <span>Création de mon portfolio</span>
+                        </div>
+                    </a>
+
+                    <a href="detailmaquette.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/maquette_screen.png" alt="Générateur de Maquette">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Générateur de Maquette</h5>
+                            <span>Un générateur de maquette type site web</span>
+                        </div>
+                    </a>
+
+                    <a href="detailcalculatrice.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/calculatrice/calcu_screen_rec.png" alt="Calculatrice">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Calculatrice</h5>
+                            <span>Une calculatrice Casio complet</span>
+                        </div>
+                    </a>
+                </div>
+
+                <button class="nav-arrow right" id="nextBtn" aria-label="Projet suivant">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mmateta/" target="_blank" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.32 8.16H4.7V24H.32V8.16zM8.55 8.16h4.18v2.15h.06c.58-1.1 2-2.26 4.11-2.26 4.39 0 5.2 2.89 5.2 6.65V24h-4.38v-8.16c0-1.95-.04-4.45-2.71-4.45-2.71 0-3.13 2.12-3.13 4.31V24H8.55V8.16z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="mailto:melvin.mateta@gmail.com?subject=Demande de contact" aria-label="Email">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l8 6.75 8-6.75V18H4z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://github.com/MelvinMMM" target="_blank" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.11 3.32 9.44 7.94 10.97.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.23.7-3.91-1.56-3.91-1.56-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.76 0-1.27.46-2.31 1.21-3.12-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 2.91-.39c.99 0 1.99.13 2.92.39 2.21-1.5 3.19-1.19 3.19-1.19.63 1.59.23 2.76.11 3.05.76.81 1.21 1.85 1.21 3.12 0 4.48-2.71 5.47-5.3 5.75.42.36.8 1.09.8 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <p>© 2026 Melvin Mateta — Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="../js/click-light.js" defer></script>
+    <script src="../js/burger.js" defer></script>
+    <script src="../js/scroll-projects.js" defer></script>
+
+</body>
+
+</html>

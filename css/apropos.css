@@ -11,6 +11,11 @@ body {
   font-family: IBM Plex Mono;
 }
 
+canvas {
+    background: radial-gradient(circle, #1a1a2e 0%, #000000 100%);
+    display: block;
+}
+
 .sonicapropos{
     width: 50%;
     margin-right: 15%;
@@ -30,11 +35,6 @@ body {
     align-items: center;
     touch-action: none;
     max-width: 1200px;
-}
-
-canvas {
-    background: radial-gradient(circle, #1a1a2e 0%, #000000 100%);
-    display: block;
 }
 
 .game-modal {
