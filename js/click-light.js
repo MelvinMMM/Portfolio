@@ -22,3 +22,29 @@ window.addEventListener('mousedown', (event) => {
     setTimeout(() => p.remove(), 200);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.createElement("div");
+    lightbox.className = "lightbox-overlay";
+    style = `
+        top: 0;
+    `;
+    lightbox.style.cssText = style;
+    
+    const lightboxImage = document.createElement("img");
+    lightbox.appendChild(lightboxImage);
+    document.body.appendChild(lightbox);
+
+    const images = document.querySelectorAll(".project-image img, .project-image-full img");
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            lightboxImage.src = img.src;
+            lightbox.classList.add("active");
+        });
+    });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+    });
+});
