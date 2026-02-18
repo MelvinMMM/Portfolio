@@ -54,11 +54,7 @@ const zones = [
         type: 'info',
         color: '#66ff66',
         title: "Expérience",
-<<<<<<< HEAD
         desc: "Assistant dév chez Onepoint et assistant chef de projet chez SFR.",
-=======
-        desc: "Assistant dév chez Onepoint, service client chez Carrefour & Ibis Budget et assistant chef de projet chez SFR.",
->>>>>>> df4adfd1fba817df829412db919e3ec909697670
         visited: false
     },
     {
@@ -284,7 +280,6 @@ function update() {
     requestAnimationFrame(update);
 }
 
-<<<<<<< HEAD
 window.addEventListener('keydown', function(e) {
     // Liste des touches à bloquer (Espace, Flèche Haut, Flèche Bas)
     const keysToBlock = ['Space', 'ArrowUp', 'ArrowDown'];
@@ -297,7 +292,5 @@ window.addEventListener('keydown', function(e) {
     }
 }, false);
 
-=======
->>>>>>> df4adfd1fba817df829412db919e3ec909697670
 update();
 
