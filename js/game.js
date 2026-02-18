@@ -71,6 +71,14 @@ const zones = [
         url: '/pdf/cv.pdf',
         color: 'rgba(255, 255, 255, 0.03)',
         visited: false
+    },
+    {
+        id: 'nocode',
+        type: 'info',
+        color: 'rgb(47, 0, 255)',
+        title: "NoCode & LowCode",
+        desc: "Création de sites web sans coder, en utilisant des outils NoCode ou LowCode comme Airtable, Zapier, etc.",
+        visited: false
     }
 ];
 
@@ -103,12 +111,14 @@ function resizeGame() {
     zones[4].y = 10;
     zones[4].w = 50;
     zones[4].h = 50;
+
+    zones[5].x = canvas.width * 0.52 - boxSize; zones[5].y = canvas.height * 0.23 - boxSize;
+    zones[5].w = boxSize; zones[5].h = boxSize;
 }
 
 window.addEventListener('resize', resizeGame);
 resizeGame();
 
-// --- INPUTS ---
 const input = { active: false, x: 0, y: 0 };
 
 function getEventPos(e) {

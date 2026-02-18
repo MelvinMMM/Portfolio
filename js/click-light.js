@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightbox = document.createElement("div");
     lightbox.className = "lightbox-overlay";
     style = `
-        top: 0;
+        position: fixed;
+        top: 0; left: 0;
     `;
     lightbox.style.cssText = style;
     

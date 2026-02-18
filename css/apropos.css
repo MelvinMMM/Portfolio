@@ -16,6 +16,15 @@ canvas {
     display: block;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color : var(--accent);
+}
+
 .sonicapropos{
     width: 50%;
     margin-right: 15%;
