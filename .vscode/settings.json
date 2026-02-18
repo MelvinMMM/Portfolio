@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 {
     "DockerRun.DisableDockerrc": true
+=======
+{
+    "DockerRun.DisableDockerrc": true
+>>>>>>> df4adfd1fba817df829412db919e3ec909697670
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   color: rgba(255, 255, 255, 0.6);
@@ -35,3 +36,42 @@
   transform: translateY(-1px);
 }
 
+=======
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  background: #050f23;
+  padding: 16px 0;
+  font-family: IBM Plex Mono;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.social-icons a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--muted);
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover svg {
+  fill: var(--accent);
+  transform: translateY(-1px);
+}
+
+>>>>>>> df4adfd1fba817df829412db919e3ec909697670

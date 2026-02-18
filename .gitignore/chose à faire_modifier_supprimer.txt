@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 - dans apropos, mettre plus en valeur le dev web et musique.
 - mettre/remplacer des projets plus fini, plus projets.
+=======
+- dans apropos, mettre plus en valeur le dev web et musique.
+- mettre/remplacer des projets plus fini, plus projets.
+>>>>>>> df4adfd1fba817df829412db919e3ec909697670
 - 
