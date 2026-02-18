@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 # Portfolio de Melvin Mateta v2.3.0
-=======
-# Portfolio de Melvin Mateta v2.2.1
->>>>>>> df4adfd1fba817df829412db919e3ec909697670
 
 > **"Codeur ultra-rapide & créatif"**
 > Optimisation, composition et interfaces soignées — je conçois des sites web rapides et accessibles.
 
 ---
-<<<<<<< HEAD
 ## Mise à jour :
 
 * **Ajout de 2 projets** : Portfolio Wordpress et Outils de prospection pour un freelancer.
@@ -18,11 +13,6 @@
 ---
 ## Auteur
 * **Melvin Mateta** : Développeur Web, Musicien & Nocode / Lowcode.
-=======
-
-## Auteur
-* **Melvin Mateta** : Développeur Web, Musicien & Designer UI.
->>>>>>> df4adfd1fba817df829412db919e3ec909697670
 
 ---
 
