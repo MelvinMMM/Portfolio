@@ -77,3 +77,27 @@ h3 {
     transform: scale(1.02);
     transition: 0.3s ease;
 }
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: #e8faff;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  border-color: var(--accent);
+  background: rgba(87, 230, 255, 0.1);
+  transform: translateY(-2px);
+}
