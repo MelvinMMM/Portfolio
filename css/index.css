@@ -110,7 +110,7 @@ margin: 24px 0;
 }
 
 .meta {
-  color: rgba(255, 255, 255, 0.5);
+  color: #e8faff;
   font-size: 13px;
   margin: 24px 0;
 }
@@ -134,7 +134,8 @@ margin: 24px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 180px;     
+  min-height: 180px;    
+  pointer-events: none; 
 }
 
 .card h4 {
@@ -164,14 +165,13 @@ margin: 24px 0;
 }
 
 .visual-plate {
+  display: none;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
   border-radius: 16px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
   overflow: hidden;
 }
 
@@ -320,6 +320,7 @@ margin: 24px 0;
   font-size: 0.9rem;
   color: #e8faff;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .badge:hover {

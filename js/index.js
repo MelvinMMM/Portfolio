@@ -56,9 +56,9 @@
     if (mode === 'sonic') {
       body.classList.add('sonic-mode');
 
-      // Changement de l'image et du texte alternatif
+
       if(portrait) {
-        portrait.src = 'img/sonic.png'; // <--- Assure-toi que ce fichier existe !
+        portrait.src = 'img/sonic.png';
         portrait.alt = 'Sonic illustration';
       }
 
@@ -72,9 +72,8 @@
     } else {
       body.classList.remove('sonic-mode');
 
-      // Retour à l'image d'origine
       if(portrait) {
-        portrait.src = 'img/melvin3.png'; // <--- L'image originale définie dans ton HTML
+        portrait.src = 'img/melvin3.png';
         portrait.alt = 'Melvin illustration';
       }
 
