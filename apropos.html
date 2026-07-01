@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A propos</title>
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/apropos.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="Image/png" href="img/logo.png">
 </head>
@@ -20,58 +19,96 @@
                 <span class="brand-name">Melvin Mateta</span>
             </a>
             <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <a class="nav-link" href="projets.html">Projets</a>
-                <a class="nav-link" href="forum.html">Blog</a>
                 <a class="nav-link" href="apropos.html">A propos</a>
             </nav>
         </div>
     </header>
 
     <main class="bloc">
-    <div class="game-container">
-        <canvas id="gameCanvas"></canvas>
-        <div id="game-modal" class="game-modal hidden">
-            <h3 id="modal-title">Titre</h3>
-            <p id="modal-desc">Description</p>
-            <button id="close-modal">Fermer (Espace)</button>
-        </div>
-        <div class="controls-hint">
-            Utilise les flèches ⬅️⬆️⬇️➡️ pour bouger
-        </div>
-    </div>
+        <!-- Section Présentation Hero -->
+        <section class="about-hero container">
+            <div class="about-hero-left">
+                <h1>À propos de moi</h1>
+                <p>Hello ! Je suis <strong>Melvin Mateta</strong>, développeur web, designer UI et musicien créatif basé
+                    au Vésinet, en Île-de-France.</p>
+                <p>Passionné par les technologies du web et le design interactif, je combine des compétences en
+                    développement (Frontend/Backend) ainsi qu'en automatisation NoCode/LowCode et compositions
+                    musicales.</p>
+                <p>Actuellement en 3ème année à l'école <strong>.Decode</strong> à Paris, je cherche toujours à
+                    repousser les limites des interfaces web classiques pour concevoir des expériences utilisateurs
+                    immersives, uniques et mémorables.</p>
+            </div>
+            <div class="about-hero-right">
+                <h3>Infos clés</h3>
+                <ul class="about-info-list">
+                    <li>Localisation :Le Vésinet, Île-de-France</li>
+                    <li>Formation : 2ème année à .Decode (Paris)</li>
+                    <li>Recherche : Alternance (Juillet 2026)</li>
+                    <li>Contact : <a href="mailto:melvin.mateta@gmail.com">melvin.mateta@gmail.com</a></li>
+                    <li>Mon CV : <a href="pdf/cv.pdf" target="_blank">Télécharger (PDF)</a></li>
+                </ul>
+            </div>
+        </section>
 
-    <div class="sections container">
-        <article class="card">
-            <h4>Dev Web</h4>
-            <p>Étudiant en 2ème année à l'école .Decode sur Paris. HTML, CSS, JS, PHP, Bootstrap, React.js, Symfony & Wordpress.</p>
-        </article>
-        <article class="card">
-            <h4>Musique</h4>
-            <p>Je compose de la musique quand je ne code pas. Je sais faire des musiques de jeux vidéo style rétro, rock, métal, trap, jazz et électro.</p>
-        </article>
-        <article class="card">
-            <h4>NoCode<br>LowCode</h4>
-            <p>Je suis capable de créer des sites web sans coder, en utilisant des outils NoCode ou LowCode comme Webflow, Framer, etc.</p>
-        </article>
-        
-    </div>
-    <div class="sections container">
-        <article class="card">
-            <h4>Expérience</h4>
-            <p>Assistant dév chez Onepoint et assistant chef de projet chez SFR.</p>
-        </article>
-        <article class="card">
-            <h4>Contact</h4>
-            <p>Dispo WeekEnd (job), avril (stage), septembre 2026 (alternance) et Freelance.<br>
-               <a href="mailto:melvin.mateta@gmail.com">melvin.mateta@gmail.com</a></p>
-        </article>
-    </div>
-</main>
+        <!-- Section Compétences & Cartes -->
+        <div class="sections container">
+            <article class="card">
+                <h4>Dev Web</h4>
+                <p>HTML5, CSS3, JavaScript, React.js, Next.js, Bootstrap, Tailwind, Figma.</p>
+            </article>
+            <article class="card">
+                <h4>Musique</h4>
+                <p>Composition musicale de jeux vidéo (rétro, rock, métal, jazz, électro).</p>
+            </article>
+            <article class="card">
+                <h4>NoCode<br>LowCode</h4>
+                <p>Création et automatisation via Webflow, Framer, Airtable et Zapier.</p>
+            </article>
+        </div>
+
+        <div class="sections container">
+            <article class="card">
+                <h4>Expérience</h4>
+                <p>Assistant développeur chez <strong>Onepoint</strong> & assistant chef de projet chez
+                    <strong>SFR</strong>.</p>
+            </article>
+            <article class="card">
+                <h4>Disponibilité</h4>
+                <p>Disponible pour des missions en Freelance, des projets le week-end, ou pour échanger sur une
+                    opportunité !</p>
+            </article>
+        </div>
+
+        <!-- Section Jeu Interactif CTA -->
+        <section class="game-toggle-section container">
+            <h3>Envie d'explorer mon parcours autrement ?</h3>
+            <p>J'ai développé un mini-jeu en JavaScript Canvas. Déplace-toi dans la zone pour débloquer les informations
+                !</p>
+            <button id="toggle-game-btn" class="btn primary">🎮 Lancer la version interactive</button>
+        </section>
+
+        <!-- Le Jeu (Masqué par défaut) -->
+        <div class="game-container hidden">
+            <button id="game-music-toggle" class="game-music-toggle" aria-label="Couper la musique">🔊</button>
+            <canvas id="gameCanvas">
+                Votre navigateur ne supporte pas l'élément canvas. Ce jeu interactif en JavaScript vous permet de diriger un personnage à l'aide des touches directionnelles du clavier pour découvrir le parcours de Melvin (ses compétences, ses expériences de développement web, Nocode/Lowcode et de musique). Les mêmes informations sont accessibles textuellement et de façon structurée plus haut dans la page.
+            </canvas>
+            <div id="game-modal" class="game-modal hidden">
+                <h3 id="modal-title">Titre</h3>
+                <p id="modal-desc">Description</p>
+                <button id="close-modal">Fermer (Espace)</button>
+            </div>
+            <div class="controls-hint">
+                Utilise les flèches ⬅️⬆️⬇️➡️ pour bouger
+            </div>
+        </div>
+    </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">

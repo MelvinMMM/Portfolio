@@ -11,11 +11,37 @@ playerImage.src = 'img/logo.png';
 
 const bgMusic = new Audio('music/game-music.mp3');
 bgMusic.loop = true;
-bgMusic.volume = 0.3;
+bgMusic.volume = 0.15; // Réduction du volume par défaut
 
 const sfxOpen = new Audio('music/open-sound.mp3');
 const sfxClose = new Audio('music/close-sound.mp3');
 const sfxSecret = new Audio('music/open-sound.mp3');
+
+// Gestion de la sourdine du jeu
+const gameMusicToggle = document.getElementById('game-music-toggle');
+let gameMuted = false;
+
+if (gameMusicToggle) {
+    gameMusicToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        gameMuted = !gameMuted;
+        if (gameMuted) {
+            bgMusic.volume = 0;
+            sfxOpen.volume = 0;
+            sfxClose.volume = 0;
+            sfxSecret.volume = 0;
+            gameMusicToggle.textContent = '🔇';
+            gameMusicToggle.setAttribute('aria-label', 'Activer la musique du jeu');
+        } else {
+            bgMusic.volume = 0.15;
+            sfxOpen.volume = 1.0;
+            sfxClose.volume = 1.0;
+            sfxSecret.volume = 1.0;
+            gameMusicToggle.textContent = '🔊';
+            gameMusicToggle.setAttribute('aria-label', 'Couper la musique du jeu');
+        }
+    });
+}
 
 const player = {
     x: 0,
@@ -132,9 +158,16 @@ function getEventPos(e) {
     return { x: clientX - rect.left, y: clientY - rect.top };
 }
 
+function startMusic() {
+    if (!musicStarted) {
+        bgMusic.play().catch(() => { });
+        musicStarted = true;
+    }
+}
+
 function startInput(e) {
     if (isModalOpen) return;
-    if (!musicStarted) { bgMusic.play().catch(() => { }); musicStarted = true; }
+    startMusic();
     input.active = true;
     const pos = getEventPos(e);
     input.x = pos.x; input.y = pos.y;
@@ -160,7 +193,7 @@ canvas.addEventListener('touchend', endInput);
 
 const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, z: false, s: false, q: false, d: false };
 document.addEventListener('keydown', (e) => {
-    if (!musicStarted) { bgMusic.play().catch(() => { }); musicStarted = true; }
+    startMusic();
     if (isModalOpen) { if (e.code === 'Space' || e.code === 'Escape') closeModal(); return; }
     if (keys.hasOwnProperty(e.key)) keys[e.key] = true;
 });
@@ -303,4 +336,28 @@ window.addEventListener('keydown', function(e) {
 }, false);
 
 update();
+
+// Gestion de l'affichage/masquage du jeu
+const toggleGameBtn = document.getElementById('toggle-game-btn');
+const gameSectionContainer = document.querySelector('.game-container');
+
+if (toggleGameBtn && gameSectionContainer) {
+    toggleGameBtn.addEventListener('click', () => {
+        const isHidden = gameSectionContainer.classList.toggle('hidden');
+        if (isHidden) {
+            toggleGameBtn.textContent = '🎮 Lancer la version interactive';
+            if (musicStarted) {
+                bgMusic.pause();
+                bgMusic.currentTime = 0;
+                musicStarted = false;
+            }
+        } else {
+            toggleGameBtn.textContent = '🎮 Cacher la version interactive';
+            resizeGame();
+            setTimeout(() => {
+                gameSectionContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    });
+}
 

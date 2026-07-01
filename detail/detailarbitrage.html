@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet - Pokédex</title>
+    <title>Projet - Arbitrage Travail-Région</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/detailprojets.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -32,119 +32,95 @@
 
     <main class="container page">
         <section class="project-header">
-            <h1>Pokédex</h1>
+            <h1>Arbitrage Travail-Région</h1>
             <div class="info1">
                 <div class="mise_en_forme">
                     <p><strong>Compétences</strong></p>
-                    <p>Figma</p>
+                    <p>Python, Streamlit, Pandas,<br> Data Science, API REST</p>
                 </div>
                 <div class="mise_en_forme">
-                    <p><strong>Equipe</strong></p>
+                    <p><strong>Équipe</strong></p>
                     <p>Melvin Mateta</p>
                 </div>
                 <div class="mise_en_forme">
                     <p><strong>Date</strong></p>
-                    <p>Juin 2025</p>
+                    <p>Avril 2026</p>
                 </div>
             </div>
-            <div class="project-video-format-mobile">
-                <video id="video" autoplay muted loop playsinline>
-                    <source src="../img/pokedex/video4.mp4" type="video/mp4">
-                </video>
+            <!-- Capture d'écran principale de l'application -->
+            <div class="project-image-full" style="max-width: 800px; width: 100%; margin-top: 24px;">
+                <img src="../img/arbitrage/interface.png" alt="Arbitrage Travail-Région interface" style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.5);">
             </div>
         </section>
 
         <section class="project-info">
             <div class="info2">
-                <h2><strong>Description</strong></h2>
+                <h2><strong>Présentation du Projet</strong></h2>
                 <p>
-                    Ce projet consiste en une interface de Pokédex mobile, prototypée sous Figma. L’application offre
-                    une navigation intuitive permettant de rechercher des Pokémon, d'analyser leurs statistiques et de
-                    consulter leurs chaînes d'évolution. Le design est inspiré de plusieurs applications Pokédex
-                    mobiles.
+                    <strong>Arbitrage Travail-Région</strong> est une application web d'aide à la décision à destination des salariés d'Île-de-France et des régions. L'application résout un problème quotidien concret : indiquer à l'utilisateur s'il est judicieux de se déplacer au bureau ou s'il est préférable de rester en télétravail. Ce verdict est calculé à partir de l'affluence historique et du niveau estimé de stress ou de perturbations sur le réseau de transports en commun (SNCF/RATP).
                 </p>
             </div>
         </section>
 
-        <section class="project-video-wrapper">
-            <div class="project-video-text">
-                <h2>Intéraction avec la pokéball</h2>
-                <p>
-                    J'ai implémenté un overlay qui s'active via un clic sur la Pokéball. L'arrière-plan à un
-                    calque fixe noir avec une opacité de 25 %, mettant
-                    ainsi l'accent sur le contenu au premier plan. L'affichage est enrichi par une animation de
-                    transition de bas en haut, et l'interface se referme d'un simple clic sur le déclencheur initial.
+        <!-- Section Pivot Scientifique -->
+        <section class="project-info" style="margin-top: 24px;">
+            <div class="info2" style="border-left: 3px solid var(--accent); padding-left: 20px;">
+                <h3 style="font-family: Orbitron, sans-serif; color: #fff; margin-bottom: 12px; text-align: left;">La Démarche Scientifique & Le Pivot Technique</h3>
+                <p style="font-size: 15px; line-height: 1.6;">
+                    <strong>Le blocage du Machine Learning :</strong> L'approche de départ prévoyait d'utiliser un modèle prédictif supervisé de classification (<em>RandomForestClassifier</em>). Cependant, la structure des données fournies en Open Data par la SNCF (ponctualité, taux de régularité) ne descend pas en dessous d'une maille mensuelle. Il s'est avéré mathématiquement impossible d'entraîner une intelligence artificielle à détecter des anomalies journalières (liées à la météo du jour ou à une grève soudaine) sur la base de moyennes mensuelles lissées.
                 </p>
-            </div>
-
-            <div class="project-video-format-mobile">
-                <video autoplay muted loop playsinline>
-                    <source src="../img/pokedex/video2.mp4" type="video/mp4">
-                </video>
-            </div>
-        </section>
-
-        <section class="project-video-wrapper">
-            <div class="project-video-format-mobile">
-                <video autoplay muted loop playsinline>
-                    <source src="../img/pokedex/video3.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="project-video-text">
-                <h2>Gestion de l'overlay "Version du jeu"</h2>
-                <p>
-                    L'activation du menu déclenche l'apparition d'un overlay avec une animation de bas en haut.
-                    Cette interface dispose d'une zone de défilement pour consulter l'ensemble du contenu,
-                    tandis qu'un arrière-plan semi-transparent (opacité 25 %) isole la vue. Pour l'ergonomie, j'ai
-                    intégré une zone réactive invisible permettant de fermer l'overlay d'un simple clic à l'extérieur de
-                    la fenêtre.
+                <p style="font-size: 15px; line-height: 1.6; margin-top: 12px;">
+                    <strong>La solution algorithmique déterministe :</strong> Face à cette contrainte de données, j'ai pivoté vers un modèle algorithmique déterministe transparent. Le système calcule un "score de stress" pondéré en combinant plusieurs facteurs de perturbation en temps réel : volume des précipitations, chutes de neige, vent, mouvements sociaux déclarés, jour de la semaine (mardi et jeudi pénalisés), et fréquence horaire de passage de la gare sélectionnée.
                 </p>
             </div>
         </section>
 
+        <!-- Feature 1: Géolocalisation & Météo -->
         <section class="project-video-wrapper">
             <div class="project-video-text">
-                <h2>Vue détaillée du Pokémon</h2>
+                <h2>Géolocalisation & Météo Hyper-Locale</h2>
                 <p>
-                    La sélection d'un Pokémon ouvre une fiche complète dont l'identité visuelle s'adapte dynamiquement à
-                    son type. Le contenu est organisé en quatre sections : Espèces, Talents, Description et
-                    Statistiques. Un menu de navigation present en bas de l'écran permet de basculer instantanément
-                    entre ces onglets, tandis que le dernier bouton est dédié à assurer un retour rapide à l'écran de
-                    navigation
-                    principal.
+                    L'application intègre un outil de géocodage. Lorsque l'utilisateur saisit son adresse ou sa commune, les coordonnées géographiques exactes (latitude/longitude) sont extraites en temps réel. Ces coordonnées servent ensuite à interroger l'API <strong>Open-Meteo</strong> pour récupérer les conditions atmosphériques ultra-locales influant sur les conditions ferroviaires.
                 </p>
             </div>
 
             <div class="project-image">
-                <img src="../img/pokedex/screen2.png" alt="">
+                <img src="../img/arbitrage/meteo.png" alt="Arbitrage Travail-Région météo">
             </div>
         </section>
 
+        <!-- Feature 2: Verdict décisionnel -->
         <section class="project-video-wrapper">
-            <div class="project-video">
-                <video autoplay muted loop playsinline>
-                    <source src="../img/pokedex/video.mp4" type="video/mp4">
-                </video>
+            <div class="project-image">
+                <img src="../img/arbitrage/ecrandeverdict.png" alt="Arbitrage Travail-Région verdict">
             </div>
+
             <div class="project-video-text">
-                <h2>Gestion des variantes d'affichage</h2>
+                <h2>Verdict d'Arbitrage Instantané</h2>
                 <p>
-                    Ce composant gravite autour de ses trois états : Stats (par défaut), Min et Max. Le passage entre
-                    ces
-                    variantes est accompagné par des micro-interactions animées, assurant une transition visuelle
-                    cohérente lors du changement d'état par l'utilisateur.
+                    L'algorithme de scoring synthétise l'ensemble des données (météo, jour, gares, mouvements sociaux) pour retourner un verdict visuel catégorique : 🟢 Bureau (conditions favorables), 🟠 Télétravail Conseillé (risque de ralentissements modérés), ou 🔴 Télétravail Fortement Recommandé (fort risque de saturation ou blocage complet du réseau).
                 </p>
             </div>
         </section>
 
-        <section class="project-image-full">
-            <img src="../img/pokedex/screen4.png" alt="vue supplémantaire du Pokédex sur figma">
+        <!-- Feature 3: Tableaux de bord et tendances -->
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Tableaux de Bord de Tendances</h2>
+                <p>
+                    L'application Streamlit affiche des graphes interactifs détaillant les prévisions et tendances sur les 7 prochains jours. De plus, un indicateur d'affluence horaire estimée permet aux collaborateurs d'identifier les fenêtres de déplacement optimales s'ils choisissent de se rendre physiquement sur leur lieu de travail.
+                </p>
+            </div>
+
+            <div class="project-image">
+                <img src="../img/arbitrage/graphique.png" alt="Arbitrage Travail-Région graphiques">
+            </div>
         </section>
 
         <section class="project-links">
-            <a href="https://www.figma.com/design/ulvq4v8THYJVWOAsAXyAen/Untitled?node-id=0-1&m=dev&t=t2rhOXQZXA01Fz1a-1"
-                target="_blank">Accéder au projet</a>
+            <a href="https://github.com/MelvinMMM/PredictTrain-SNCF#arbitrage-travail-r%C3%A9gion-hyper-local" target="_blank">Voir le Repo GitHub</a>
         </section>
+
         <section class="see-more container">
             <h2 class="section-title">Voir d'autres projets</h2>
             <div class="see-more-wrapper">
@@ -163,16 +139,6 @@
                         </div>
                     </a>
 
-                    <a href="detailarbitrage.html" class="project-preview">
-                        <div class="preview-image">
-                            <img src="../img/arbitrage/interface.png" alt="Arbitrage Travail-Région">
-                        </div>
-                        <div class="preview-info">
-                            <h5>Arbitrage Travail-Région</h5>
-                            <span>Algorithme de décision télétravail</span>
-                        </div>
-                    </a>
-
                     <a href="detailchicbook.html" class="project-preview">
                         <div class="preview-image">
                             <img src="../img/chicbook/pagedaccueil.png" alt="ChicBook">
@@ -180,6 +146,16 @@
                         <div class="preview-info">
                             <h5>ChicBook</h5>
                             <span>Plateforme de recrutement artistique</span>
+                        </div>
+                    </a>
+
+                    <a href="detailpokedex.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/pokedex/screen.png" alt="Pokédex">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Pokédex</h5>
+                            <span>Fiche descriptive du Pokédex</span>
                         </div>
                     </a>
 
@@ -209,7 +185,27 @@
                         </div>
                         <div class="preview-info">
                             <h5>Calculatrice</h5>
-                            <span>Une calculatrice Casio complet</span>
+                            <span>Une calculatrice type Casio</span>
+                        </div>
+                    </a>
+
+                    <a href="detailportfolio.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/portfolio_screen.png" alt="Portfolio WordPress">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Portfolio WordPress</h5>
+                            <span>Un portfolio professionnel sous WordPress</span>
+                        </div>
+                    </a>
+
+                    <a href="detailprospection.html" class="project-preview">
+                        <div class="preview-image">
+                            <img src="../img/prospection_screen.png" alt="Outil Prospection Freelance">
+                        </div>
+                        <div class="preview-info">
+                            <h5>Prospection Freelance</h5>
+                            <span>Automatisation commerciale et de suivi de leads</span>
                         </div>
                     </a>
                 </div>
@@ -220,6 +216,7 @@
             </div>
         </section>
     </main>
+
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="social-icons">
@@ -243,14 +240,6 @@
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path
                             d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.11 3.32 9.44 7.94 10.97.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.23.7-3.91-1.56-3.91-1.56-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.76 0-1.27.46-2.31 1.21-3.12-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 2.91-.39c.99 0 1.99.13 2.92.39 2.21-1.5 3.19-1.19 3.19-1.19.63 1.59.23 2.76.11 3.05.76.81 1.21 1.85 1.21 3.12 0 4.48-2.71 5.47-5.3 5.75.42.36.8 1.09.8 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
-                        </path>
-                    </svg>
-                </a>
-
-                <a href="https://www.youtube.com/@rohaxmm6315" target="_blank" aria-label="YouTube">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M23.5 6.2s-.23-1.64-.95-2.36c-.9-.95-1.9-.96-2.36-1.01C16.14 2.5 12 2.5 12 2.5h-.01s-4.14 0-8.19.33c-.46.05-1.46.06-2.36 1.01C.73 4.56.5 6.2.5 6.2S.25 8.16.25 10.13v1.72c0 1.97.25 3.93.25 3.93s.23 1.64.95 2.36c.9.95 2.08.92 2.61 1.02 1.9.18 7.94.32 7.94.32s4.14-.01 8.19-.34c.46-.05 1.46-.06 2.36-1.01.72-.72.95-2.36.95-2.36s.25-1.96.25-3.93v-1.72c0-1.97-.25-3.93-.25-3.93zM9.75 14.62V7.88l6.13 3.37-6.13 3.37z">
                         </path>
                     </svg>
                 </a>

@@ -41,6 +41,27 @@ font-family: IBM Plex Mono;
   font-size: 14px;
 }
 
+.music-toggle {
+  background: none;
+  border: 0;
+  color: var(--accent);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+}
+
+.music-toggle.hidden {
+  display: none;
+}
+
 .bloc {
   min-height: calc(100vh - 140px);
   display: flex;

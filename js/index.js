@@ -1,5 +1,6 @@
 (function () {
   const switchBtn = document.getElementById('mode-switch');
+  const musicToggleBtn = document.getElementById('music-toggle'); // <--- AJOUT
   const body = document.body;
   
   // On sélectionne l'image du portrait
@@ -13,9 +14,30 @@
 
   const ringSound = new Audio('music/ring_sound.mp3');
 
-  sonicMusic.volume = 0.7;    
+  sonicMusic.volume = 0.15;    // Volume réduit par défaut de 0.7 à 0.15
   ringSound.volume = 0.1;      
 
+  let isMuted = false; // <--- AJOUT
+
+  musicToggleBtn.addEventListener('click', () => {
+    isMuted = !isMuted;
+    if (isMuted) {
+      sonicMusic.volume = 0;
+      musicToggleBtn.textContent = '🔇';
+      musicToggleBtn.setAttribute('aria-label', 'Activer la musique');
+    } else {
+      sonicMusic.volume = 0.15;
+      musicToggleBtn.textContent = '🔊';
+      musicToggleBtn.setAttribute('aria-label', 'Couper la musique');
+    }
+  });
+
+  function resetMusic() {
+    isMuted = false;
+    sonicMusic.volume = 0.15;
+    musicToggleBtn.textContent = '🔊';
+    musicToggleBtn.setAttribute('aria-label', 'Couper la musique');
+  }
 
   let ringInterval = null;
   const ringImages = ['img/ring1.png', 'img/ring2.png', 'img/ring3.gif', 'img/ring4.gif', 'img/ring5.gif'];
@@ -56,7 +78,6 @@
     if (mode === 'sonic') {
       body.classList.add('sonic-mode');
 
-
       if(portrait) {
         portrait.src = 'img/sonic.png';
         portrait.alt = 'Sonic illustration';
@@ -64,6 +85,10 @@
 
       switchBtn.textContent = '💻 Mode Tech';
       switchBtn.setAttribute('aria-pressed', 'true');
+
+      // Afficher le bouton de contrôle de musique et réinitialiser son état
+      musicToggleBtn.classList.remove('hidden');
+      resetMusic();
 
       ringSound.play();
       sonicMusic.play().catch(() => { });
@@ -79,6 +104,9 @@
 
       switchBtn.textContent = '🌀 Mode Sonic';
       switchBtn.setAttribute('aria-pressed', 'false');
+
+      // Cacher le bouton de contrôle de musique
+      musicToggleBtn.classList.add('hidden');
 
       sonicMusic.pause();
       sonicMusic.currentTime = 0;

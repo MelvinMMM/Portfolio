@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/projets.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="Image/png" href="img/logo.png">
 </head>
@@ -28,49 +26,64 @@
             </button>
             <nav class="nav">
                 <a class="nav-link" href="projets.html">Projets</a>
-                <a class="nav-link" href="forum.html">Blog</a>
                 <a class="nav-link" href="apropos.html">A propos</a>
             </nav>
         </div>
     </header>
 
     <div class="page">
-        <main class="container my-5">
+        <main class="container">
 
-            <h2 class="text-white">Développement Web</h2>
-            <div class="row" id="project-list">
-                <div class="card col-12 col-md-4">
-                    <img src="img/pokedex/screen.png" class="card-img-top" alt="...">
+            <h2>Développement Web</h2>
+            <div class="projects-grid" id="project-list">
+                <div class="card">
+                    <img src="img/chicbook/pagedaccueil.png" class="card-img-top" alt="ChicBook page d'accueil">
                     <div class="card-body">
-                        <h5 class="card-title text-light">Pokédex</h5>
-                        <div class="badges">
-                            <span class="badge">Figma</span>
-                        </div>
-                        <p class="card-text">Interface UX/UI interactive conçue sur Figma pour centraliser les données
-                            Pokémon : statistiques détaillées, évolutions et gestion des captures en temps réel.</p>
-                        <a href="detail/detailpokedex.html" class="btn btn-primary">Voir plus</a>
-                    </div>
-                </div>
-
-                <div class="card col-12 col-md-4">
-                    <img src="img/maquette_screen.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-light">Générateur de maquette</h5>
+                        <h5 class="card-title">ChicBook</h5>
                         <div class="badges">
                             <span class="badge">HTML5 / CSS3</span>
-                            <span class="badge">Bootstrap</span>
                             <span class="badge">JavaScript</span>
+                            <span class="badge">PHP</span>
+                            <span class="badge">Tailwind CSS</span>
                         </div>
-                        <p class="card-text">Outil de prototypage dynamique permettant de concevoir des maquettes web
-                            via un système de glisser-déposer.</p>
-                        <a href="detail/detailmaquette.html" class="btn btn-primary">Voir plus</a>
+                        <p class="card-text">Job board conçu exclusivement pour connecter les professionnels du recrutement et les artistes. Développé en équipe de stage sur 2 mois.</p>
+                        <a href="detail/detailchicbook.html" class="btn">Voir plus</a>
                     </div>
                 </div>
 
-                <div class="card col-12 col-md-4">
+                <div class="card">
+                    <img src="img/eventhorizon/vueprincipale.png" class="card-img-top" alt="Event-Horizon page d'accueil">
+                    <div class="card-body">
+                        <h5 class="card-title">Event-Horizon</h5>
+                        <div class="badges">
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">Three.js</span>
+                            <span class="badge">Globe.gl</span>
+                            <span class="badge">Tailwind CSS</span>
+                        </div>
+                        <p class="card-text">Globe 3D interactif visualisant les incidents mondiaux en temps réel via les API NASA/USGS. Traduction i18n multilingue.</p>
+                        <a href="detail/detaileventhorizon.html" class="btn">Voir plus</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/portfolio_screen.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio Wordpress</h5>
+                        <div class="badges">
+                            <span class="badge">WordPress</span>
+                            <span class="badge">Divi</span>
+                        </div>
+                        <p class="card-text">Portfolio professionnel conçu avec WordPress et le thème Divi, intégrant
+                            des fonctionnalités de personnalisation avancée et une interface utilisateur intuitive.</p>
+                        <a href="detail/detailportfolio.html" class="btn">Voir plus</a>
+                    </div>
+                </div>
+
+                <div class="card">
                     <img src="img/calcu_screen.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-light">Calculatrice</h5>
+                        <h5 class="card-title">Calculatrice</h5>
                         <div class="badges">
                             <span class="badge">HTML5 / CSS3</span>
                             <span class="badge">Bootstrap</span>
@@ -78,33 +91,47 @@
                         </div>
                         <p class="card-text">Calculatrice interactive développée, alliant l'ergonomie fidèle des modèles
                             Casio à une logique de calcul robuste.</p>
-                        <a href="detail/detailcalculatrice.html" class="btn btn-primary">Voir plus</a>
+                        <a href="detail/detailcalculatrice.html" class="btn">Voir plus</a>
                     </div>
                 </div>
 
-                <div class="card col-12 col-md-4">
-                    <img src="img/portfolio_screen.png" class="card-img-top" alt="">
+                <div class="card">
+                    <img src="img/pokedex/screen.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-light">Portfolio Wordpress</h5>
+                        <h5 class="card-title">Pokédex</h5>
                         <div class="badges">
-                            <span class="badge">WordPress</span>
-                            <span class="badge">Divi</span>
+                            <span class="badge">Figma</span>
                         </div>
-                        <p class="card-text">Portfolio professionnel conçu avec WordPress et le thème Divi, intégrant
-                            des fonctionnalités de personnalisation avancée et une interface utilisateur intuitive.</p>
-                        <a href="detail/detailportfolio.html" class="btn btn-primary">Voir plus</a>
+                        <p class="card-text">Interface UX/UI interactive conçue sur Figma pour centraliser les données
+                            Pokémon : statistiques détaillées, évolutions et gestion des captures en temps réel.</p>
+                        <a href="detail/detailpokedex.html" class="btn">Voir plus</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/maquette_screen.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Générateur de maquette</h5>
+                        <div class="badges">
+                            <span class="badge">HTML5 / CSS3</span>
+                            <span class="badge">Bootstrap</span>
+                            <span class="badge">JavaScript</span>
+                        </div>
+                        <p class="card-text">Outil de prototypage dynamique permettant de concevoir des maquettes web
+                            via un système de glisser-déposer.</p>
+                        <a href="detail/detailmaquette.html" class="btn">Voir plus</a>
                     </div>
                 </div>
             </div>
 
-            <h2 class="text-white">Nocode / Lowcode</h2>
-            <div class="row">
+            <h2>Nocode / Lowcode</h2>
+            <div class="projects-grid">
 
 
-                <div class="card col-12 col-md-4">
+                <div class="card">
                     <img src="img/prospection_screen.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-light">Outil de prospection pour un freelance</h5>
+                        <h5 class="card-title">Outil de prospection pour un freelancer</h5>
                         <div class="badges">
                             <span class="badge">Airtable</span>
                             <span class="badge">Zapier</span>
@@ -113,20 +140,33 @@
                         <p class="card-text">Application de gestion de la prospection commerciale, intégrant des
                             automatisations pour le suivi des leads et l'organisation des campagnes de contact.
                         </p>
-                        <a href="detail/detailprospection.html" class="btn btn-primary">Voir plus</a>
+                        <a href="detail/detailprospection.html" class="btn">Voir plus</a>
                     </div>
                 </div>
 
             </div>
 
-            <h2 class="text-white">Musique</h2>
-            <div class="row">
+            <h2>Autre</h2>
+            <div class="projects-grid">
+                <div class="card">
+                    <img src="img/arbitrage/interface.png" class="card-img-top" alt="Arbitrage Travail-Région">
+                    <div class="card-body">
+                        <h5 class="card-title">Arbitrage Travail-Région</h5>
+                        <div class="badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">Streamlit</span>
+                            <span class="badge">Pandas</span>
+                            <span class="badge">Data Science</span>
+                        </div>
+                        <p class="card-text">Application d'aide à la décision pour le télétravail basée sur un algorithme de scoring du stress réseau de transports SNCF/RATP.</p>
+                        <a href="detail/detailarbitrage.html" class="btn">Voir plus</a>
+                    </div>
+                </div>
 
-
-                <div class="card col-12 col-md-4">
+                <div class="card">
                     <img src="img/tctascreen.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-light">
+                        <h5 class="card-title">
                             Soundtrack - The Chronicles of The Abyss</h5>
                         <div class="badges">
                             <span class="badge">LMMS</span>
@@ -135,62 +175,11 @@
                         <p class="card-text">Bande originale complète composée de 22 thèmes immersifs, conçue pour
                             rythmer l’exploration et les combats épiques d’un univers de jeu vidéo fictif.
                         </p>
-                        <a href="detail/detailtcta.html" class="btn btn-primary">Voir plus</a>
+                        <a href="detail/detailtcta.html" class="btn">Voir plus</a>
                     </div>
                 </div>
-
             </div>
 
-            <h2 class="text-white">Design Graphique</h2>
-            <div class="row">
-
-                <div class="card col-12 col-md-4">
-                    <img src="img/seikan.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-light">Seikan</h5>
-                        <div class="badges">
-                            <span class="badge">Illustrator</span>
-                            <span class="badge">Photoshop</span>
-                        </div>
-                        <p class="card-text">Identité visuelle et charte graphique complète pour une marque de vin
-                            écoresponsable, articulée autour des concepts de contemplation et de durabilité.</p>
-                        <a href="detail/detaillogo.html" class="btn btn-primary">Voir plus</a>
-                    </div>
-                </div>
-
-                <!-- <div class="card col-12 col-md-3">
-                    <img src="img/affiche_screen.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-light">Où serez-vous ?</h5>
-                        <div class="badges">
-                            <span class="badge">React.js</span>
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">CSS3</span>
-                        </div>
-                        <p class="card-text">Affiche sur le film "The Day After Tomorrow"</p>
-                        <a href="detail/detailaffiche.html" class="btn btn-primary">Voir plus</a>
-                    </div>
-                </div> -->
-
-                <!-- <div class="card col-12 col-md-3">
-                    <img src="img/article_screen.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-light">AB - Tendances 2007</h5>
-                        <div class="badges">
-                            <span class="badge">React.js</span>
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">CSS3</span>
-                        </div>
-                        <p class="card-text">Some quick example text to build on the card title and make up
-                            the bulk of
-                            the card’s content.</p>
-                        <a href="detail/detailarticle.html" class="btn btn-primary">Voir plus</a>
-                    </div>
-                </div> -->
-
-
-
-            </div>
         </main>
     </div>
     <footer class="site-footer">
@@ -232,7 +221,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/click-light.js" defer></script>
     <script src="js/burger.js" defer></script>
 

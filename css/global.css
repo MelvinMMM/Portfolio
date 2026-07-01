@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playwrite+CA:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-
 :root {
   --bg-0: #030612;
   --bg-1: #071734;
@@ -161,4 +160,42 @@
     max-height: 200px;
     opacity: 1;
   }
+}
+
+/* Footer Styles */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  background: #050f23;
+  padding: 16px 0;
+  font-family: IBM Plex Mono;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.social-icons a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--muted);
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover svg {
+  fill: var(--accent);
+  transform: translateY(-1px);
 }
