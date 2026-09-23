@@ -33,11 +33,11 @@
 
     <main class="container page">
         <section class="project-header">
-            <h1>The Chronicles of The Abyss</h1>
+            <h1>The Chronicles of The Abyss <span class="version-badge">v1.0.0</span></h1>
             <div class="info1">
                 <div class="mise_en_forme">
                     <p><strong>Compétences</strong></p>
-                    <p>LMMS</p>
+                    <p>LMMS, IA Générative</p>
                 </div>
                 <div class="mise_en_forme">
                     <p><strong>Equipe</strong></p>
@@ -48,8 +48,8 @@
                     <p>Septembre 2024</p>
                 </div>
             </div>
-            <div class="project-image" style="max-width: 800px;">
-                <img src="../img/tctascreen.png" alt="">
+            <div class="project-image-full">
+                <img src="../img/tcta/tctascreen.png" alt="The Chronicles of The Abyss">
             </div>
         </section>
 
@@ -78,10 +78,9 @@
                 </p>
             </div>
 
-            <div class="project-image" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                <img style="width: 60vh; margin-bottom: 15px;" src="../img/tcta/screen2.png" alt="Waveform">
-
-                <audio controls style="width: 100%; max-width: 400px;">
+            <div class="project-image audio-card">
+                <img src="../img/tcta/screen2.png" alt="Waveform Thème Introduction">
+                <audio controls>
                     <source src="../music/je sais pas trop... 204.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -89,10 +88,9 @@
         </section>
 
         <section class="project-video-wrapper">
-            <div class="project-image" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                <img style="width: 60vh; margin-bottom: 15px;" src="../img/tcta/screen3.png" alt="Waveform">
-
-                <audio controls style="width: 100%; max-width: 400px;">
+            <div class="project-image audio-card">
+                <img src="../img/tcta/screen3.png" alt="Waveform Thème Mini Boss Monsters">
+                <audio controls>
                     <source src="../music/je sais pas trop... 226.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -119,10 +117,9 @@
                 </p>
             </div>
 
-            <div class="project-image" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                <img style="width: 60vh; margin-bottom: 15px;" src="../img/tcta/screen4.png" alt="Waveform">
-
-                <audio controls style="width: 100%; max-width: 400px;">
+            <div class="project-image audio-card">
+                <img src="../img/tcta/screen4.png" alt="Waveform Thème Mini Boss Soldats">
+                <audio controls>
                     <source src="../music/je sais pas trop... 227.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -130,10 +127,9 @@
         </section>
 
         <section class="project-video-wrapper">
-            <div class="project-image" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                <img style="width: 60vh; margin-bottom: 15px;" src="../img/tcta/screen5.png" alt="Waveform">
-
-                <audio controls style="width: 100%; max-width: 400px;">
+            <div class="project-image audio-card">
+                <img src="../img/tcta/screen5.png" alt="Waveform Thème Boss Final">
+                <audio controls>
                     <source src="../music/je sais pas trop... 205 normal ver.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -151,7 +147,7 @@
         </section>
 
         <section class="project-image-full">
-            <img src="../img/tctascreen.png" alt="Écran supplémentaire de la calculatrice">
+            <img src="../img/tcta/tctascreen.png" alt="The Chronicles of The Abyss">
         </section>
 
         <section class="project-links">
@@ -181,7 +177,7 @@
 
                     <a href="detailmaquette.html" class="project-preview">
                         <div class="preview-image">
-                            <img src="../img/maquette_screen.png" alt="Générateur de Maquette">
+                            <img src="../img/maquette/maquette_screen.png" alt="Générateur de Maquette">
                         </div>
                         <div class="preview-info">
                             <h5>Générateur de Maquette</h5>
@@ -216,7 +212,7 @@
                     </svg>
                 </a>
 
-                <a href="https://github.com/MelvinMMM/ton-repo-portfolio" target="_blank" aria-label="GitHub">
+                <a href="https://github.com/MelvinMMM" target="_blank" aria-label="GitHub">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path
                             d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.11 3.32 9.44 7.94 10.97.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.23.7-3.91-1.56-3.91-1.56-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.76 0-1.27.46-2.31 1.21-3.12-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 2.91-.39c.99 0 1.99.13 2.92.39 2.21-1.5 3.19-1.19 3.19-1.19.63 1.59.23 2.76.11 3.05.76.81 1.21 1.85 1.21 3.12 0 4.48-2.71 5.47-5.3 5.75.42.36.8 1.09.8 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
@@ -232,7 +228,7 @@
                     </svg>
                 </a>
             </div>
-            <p>© 2025 Melvin Mateta — Portfolio</p>
+            <p>© 2026 Melvin Mateta — Portfolio</p>
         </div>
     </footer>
 

@@ -3,8 +3,10 @@
   const musicToggleBtn = document.getElementById('music-toggle'); // <--- AJOUT
   const body = document.body;
   
-  // On sélectionne l'image du portrait
-  const portrait = document.querySelector('.portrait'); // <--- AJOUT
+  // On sélectionne l'image du portrait, le logo et le favicon
+  const portrait = document.querySelector('.portrait');
+  const brandLogo = document.querySelector('.brand-logo');
+  const favicon = document.querySelector('link[rel="icon"]');
 
   const THEME_KEY = 'mm_theme_mode';
   const TRANSITION_CLASS = 'theme-transition';
@@ -40,7 +42,7 @@
   }
 
   let ringInterval = null;
-  const ringImages = ['img/ring1.png', 'img/ring2.png', 'img/ring3.gif', 'img/ring4.gif', 'img/ring5.gif'];
+  const ringImages = ['img/sonic/ring1.png', 'img/sonic/ring2.png', 'img/sonic/ring3.gif', 'img/sonic/ring4.gif', 'img/sonic/ring5.gif'];
 
   function spawnRing() {
     const ring = document.createElement('img');
@@ -79,11 +81,20 @@
       body.classList.add('sonic-mode');
 
       if(portrait) {
-        portrait.src = 'img/sonic.png';
+        portrait.src = 'img/sonic/sonic.png';
         portrait.alt = 'Sonic illustration';
       }
 
-      switchBtn.textContent = '💻 Mode Tech';
+      if(brandLogo) {
+        brandLogo.src = 'img/sonic/logo-sonic.png';
+        brandLogo.alt = 'Sonic Logo';
+      }
+
+      if(favicon) {
+        favicon.href = 'img/sonic/logo-sonic.png';
+      }
+
+      switchBtn.innerHTML = '💻 Mode Tech';
       switchBtn.setAttribute('aria-pressed', 'true');
 
       // Afficher le bouton de contrôle de musique et réinitialiser son état
@@ -102,7 +113,16 @@
         portrait.alt = 'Melvin illustration';
       }
 
-      switchBtn.textContent = '🌀 Mode Sonic';
+      if(brandLogo) {
+        brandLogo.src = 'img/logo.png';
+        brandLogo.alt = 'Logo';
+      }
+
+      if(favicon) {
+        favicon.href = 'img/logo.png';
+      }
+
+      switchBtn.innerHTML = '<img src="img/sonic/sonic-icon.svg" alt="" class="btn-sonic-icon"> Mode Sonic';
       switchBtn.setAttribute('aria-pressed', 'false');
 
       // Cacher le bouton de contrôle de musique

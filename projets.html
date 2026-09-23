@@ -34,148 +34,231 @@
     <div class="page">
         <main class="container">
 
-            <h2>Développement Web</h2>
-            <div class="projects-grid" id="project-list">
-                <div class="card">
-                    <img src="img/chicbook/pagedaccueil.png" class="card-img-top" alt="ChicBook page d'accueil">
-                    <div class="card-body">
-                        <h5 class="card-title">ChicBook</h5>
-                        <div class="badges">
-                            <span class="badge">HTML5 / CSS3</span>
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">PHP</span>
-                            <span class="badge">Tailwind CSS</span>
-                        </div>
-                        <p class="card-text">Job board conçu exclusivement pour connecter les professionnels du recrutement et les artistes. Développé en équipe de stage sur 2 mois.</p>
-                        <a href="detail/detailchicbook.html" class="btn">Voir plus</a>
+            <section class="filter-section">
+                <div class="filter-header">
+                    <h1 class="page-title">Mes Projets</h1>
+                    <p class="page-subtitle">Explorez mes réalisations logicielles, découvrez les technologies employées ou filtrez par mot-clé.</p>
+                </div>
+
+                <div class="search-bar-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                    <input type="text" id="project-search" class="search-input" placeholder="Rechercher un projet, un mot-clé (ex: React, Python, Jeu...)" aria-label="Rechercher un projet">
+                    <button id="clear-search" class="clear-search-btn" aria-label="Effacer la recherche" style="display: none;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="filter-tags-container">
+                    <div class="filter-tags-label"><i class="fa-solid fa-filter"></i> Filtrer par technologie :</div>
+                    <div class="filter-tags" id="filter-tags">
+                        <!-- Généré dynamiquement par js/filter-projects.js -->
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="img/eventhorizon/vueprincipale.png" class="card-img-top" alt="Event-Horizon page d'accueil">
-                    <div class="card-body">
-                        <h5 class="card-title">Event-Horizon</h5>
-                        <div class="badges">
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">Three.js</span>
-                            <span class="badge">Globe.gl</span>
-                            <span class="badge">Tailwind CSS</span>
-                        </div>
-                        <p class="card-text">Globe 3D interactif visualisant les incidents mondiaux en temps réel via les API NASA/USGS. Traduction i18n multilingue.</p>
-                        <a href="detail/detaileventhorizon.html" class="btn">Voir plus</a>
-                    </div>
+                <div class="filter-status" id="filter-status" aria-live="polite">
+                    <span id="results-count" class="results-count">Chargement des projets...</span>
+                    <button id="reset-filters" class="reset-filters-btn" style="display: none;">
+                        <i class="fa-solid fa-rotate-left"></i> Réinitialiser les filtres
+                    </button>
                 </div>
+            </section>
 
-                <div class="card">
-                    <img src="img/portfolio_screen.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Portfolio Wordpress</h5>
-                        <div class="badges">
-                            <span class="badge">WordPress</span>
-                            <span class="badge">Divi</span>
+            <div id="no-results" class="no-results" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>Aucun projet trouvé</h3>
+                <p>Aucun projet ne correspond à vos critères actuels de recherche ou de filtre.</p>
+                <button class="btn btn-reset-search" id="empty-state-reset">Afficher tous les projets</button>
+            </div>
+
+            <div class="category-block" data-category="web">
+                <h2>Développement Web</h2>
+                <div class="projects-grid" id="project-list">
+                    <div class="card">
+                        <img src="img/mixology/tableaudebord.png" class="card-img-top" alt="Mixology Master page d'accueil">
+                        <div class="card-body">
+                            <h5 class="card-title">Mixology Master <span class="version-badge">v1.2.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">HTML5 / CSS3</span>
+                                <span class="badge">Web Audio API</span>
+                                <span class="badge">Python</span>
+                            </div>
+                            <p class="card-text">Application web interactive d'apprentissage et révision basée sur le Référentiel Officiel des cocktails : 9 modules, 141 questions et calculateur TAV.</p>
+                            <a href="detail/detailmixology.html" class="btn">Voir plus</a>
                         </div>
-                        <p class="card-text">Portfolio professionnel conçu avec WordPress et le thème Divi, intégrant
-                            des fonctionnalités de personnalisation avancée et une interface utilisateur intuitive.</p>
-                        <a href="detail/detailportfolio.html" class="btn">Voir plus</a>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="img/calcu_screen.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Calculatrice</h5>
-                        <div class="badges">
-                            <span class="badge">HTML5 / CSS3</span>
-                            <span class="badge">Bootstrap</span>
-                            <span class="badge">React.js</span>
+                    <div class="card">
+                        <img src="img/toitmoi/ecranprincipal.png" class="card-img-top" alt="ToitMoi page d'accueil">
+                        <div class="card-body">
+                            <h5 class="card-title">ToitMoi <span class="version-badge">v0.1.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">React</span>
+                                <span class="badge">TypeScript</span>
+                                <span class="badge">Framer Motion</span>
+                                <span class="badge">Tailwind CSS</span>
+                                <span class="badge">Docker</span>
+                            </div>
+                            <p class="card-text">Application web Mobile-First révolutionnant la recherche immobilière : deck de swipe 60fps, double match, messagerie et dossier locataire qualifié.</p>
+                            <a href="detail/detailtoitmoi.html" class="btn">Voir plus</a>
                         </div>
-                        <p class="card-text">Calculatrice interactive développée, alliant l'ergonomie fidèle des modèles
-                            Casio à une logique de calcul robuste.</p>
-                        <a href="detail/detailcalculatrice.html" class="btn">Voir plus</a>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="img/pokedex/screen.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Pokédex</h5>
-                        <div class="badges">
-                            <span class="badge">Figma</span>
+                    <div class="card">
+                        <img src="img/chicbook/pagedaccueil.png" class="card-img-top" alt="ChicBook page d'accueil">
+                        <div class="card-body">
+                            <h5 class="card-title">ChicBook <span class="version-badge">v1.0.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">HTML5 / CSS3</span>
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">PHP</span>
+                                <span class="badge">Tailwind CSS</span>
+                            </div>
+                            <p class="card-text">Job board conçu exclusivement pour connecter les professionnels du recrutement et les artistes. Développé en équipe de stage sur 2 mois.</p>
+                            <a href="detail/detailchicbook.html" class="btn">Voir plus</a>
                         </div>
-                        <p class="card-text">Interface UX/UI interactive conçue sur Figma pour centraliser les données
-                            Pokémon : statistiques détaillées, évolutions et gestion des captures en temps réel.</p>
-                        <a href="detail/detailpokedex.html" class="btn">Voir plus</a>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="img/maquette_screen.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Générateur de maquette</h5>
-                        <div class="badges">
-                            <span class="badge">HTML5 / CSS3</span>
-                            <span class="badge">Bootstrap</span>
-                            <span class="badge">JavaScript</span>
+                    <div class="card">
+                        <img src="img/eventhorizon/vueprincipale.png" class="card-img-top" alt="Event-Horizon page d'accueil">
+                        <div class="card-body">
+                            <h5 class="card-title">Event-Horizon <span class="version-badge">v1.0.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">Three.js</span>
+                                <span class="badge">Globe.gl</span>
+                                <span class="badge">Tailwind CSS</span>
+                            </div>
+                            <p class="card-text">Globe 3D interactif visualisant les incidents mondiaux en temps réel via les API NASA/USGS. Traduction i18n multilingue.</p>
+                            <a href="detail/detaileventhorizon.html" class="btn">Voir plus</a>
                         </div>
-                        <p class="card-text">Outil de prototypage dynamique permettant de concevoir des maquettes web
-                            via un système de glisser-déposer.</p>
-                        <a href="detail/detailmaquette.html" class="btn">Voir plus</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/portfolio-wp/portfolio_screen.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Wordpress <span class="version-badge">v1.0.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">WordPress</span>
+                                <span class="badge">Divi</span>
+                            </div>
+                            <p class="card-text">Portfolio professionnel conçu avec WordPress et le thème Divi, intégrant
+                                des fonctionnalités de personnalisation avancée et une interface utilisateur intuitive.</p>
+                            <a href="detail/detailportfolio.html" class="btn">Voir plus</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/calculatrice/calcu_screen.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Calculatrice <span class="version-badge">v0.1.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">HTML5 / CSS3</span>
+                                <span class="badge">Bootstrap</span>
+                                <span class="badge">React</span>
+                            </div>
+                            <p class="card-text">Calculatrice interactive développée, alliant l'ergonomie fidèle des modèles
+                                Casio à une logique de calcul robuste.</p>
+                            <a href="detail/detailcalculatrice.html" class="btn">Voir plus</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/pokedex/screen.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Pokédex <span class="version-badge">v1.0.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">Figma</span>
+                            </div>
+                            <p class="card-text">Interface UX/UI interactive conçue sur Figma pour centraliser les données
+                                Pokémon : statistiques détaillées, évolutions et gestion des captures en temps réel.</p>
+                            <a href="detail/detailpokedex.html" class="btn">Voir plus</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/maquette/maquette_screen.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Générateur de maquette <span class="version-badge">v0.1.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">HTML5 / CSS3</span>
+                                <span class="badge">Bootstrap</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+                            <p class="card-text">Outil de prototypage dynamique permettant de concevoir des maquettes web
+                                via un système de glisser-déposer.</p>
+                            <a href="detail/detailmaquette.html" class="btn">Voir plus</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <h2>Nocode / Lowcode</h2>
-            <div class="projects-grid">
-
-
-                <div class="card">
-                    <img src="img/prospection_screen.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Outil de prospection pour un freelancer</h5>
-                        <div class="badges">
-                            <span class="badge">Airtable</span>
-                            <span class="badge">Zapier</span>
-                            <span class="badge">Framer</span>
+            <div class="category-block" data-category="nocode">
+                <h2>Nocode / Lowcode</h2>
+                <div class="projects-grid">
+                    <div class="card">
+                        <img src="img/prospection/prospection_screen.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Outil de prospection pour un freelancer <span class="version-badge">v1.0.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">Airtable</span>
+                                <span class="badge">Zapier</span>
+                                <span class="badge">Framer</span>
+                            </div>
+                            <p class="card-text">Application de gestion de la prospection commerciale, intégrant des
+                                automatisations pour le suivi des leads et l'organisation des campagnes de contact.
+                            </p>
+                            <a href="detail/detailprospection.html" class="btn">Voir plus</a>
                         </div>
-                        <p class="card-text">Application de gestion de la prospection commerciale, intégrant des
-                            automatisations pour le suivi des leads et l'organisation des campagnes de contact.
-                        </p>
-                        <a href="detail/detailprospection.html" class="btn">Voir plus</a>
                     </div>
                 </div>
-
             </div>
 
-            <h2>Autre</h2>
-            <div class="projects-grid">
-                <div class="card">
-                    <img src="img/arbitrage/interface.png" class="card-img-top" alt="Arbitrage Travail-Région">
-                    <div class="card-body">
-                        <h5 class="card-title">Arbitrage Travail-Région</h5>
-                        <div class="badges">
-                            <span class="badge">Python</span>
-                            <span class="badge">Streamlit</span>
-                            <span class="badge">Pandas</span>
-                            <span class="badge">Data Science</span>
+            <div class="category-block" data-category="autre">
+                <h2>Autre</h2>
+                <div class="projects-grid">
+                    <div class="card">
+                        <img src="img/agatha/ecrantitre.png" class="card-img-top" alt="La Légende d'El Agatha">
+                        <div class="card-body">
+                            <h5 class="card-title">La Légende d'El Agatha <span class="version-badge">v1.0.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">HTML5 Canvas</span>
+                                <span class="badge">LMMS</span>
+                            </div>
+                            <p class="card-text">Jeu rétro 2D en Pixel Art alliant action arcade, QCM et combat RPG au tour par tour. Architecture modulaire et moteur audio dédié.</p>
+                            <a href="detail/detailelagatha.html" class="btn">Voir plus</a>
                         </div>
-                        <p class="card-text">Application d'aide à la décision pour le télétravail basée sur un algorithme de scoring du stress réseau de transports SNCF/RATP.</p>
-                        <a href="detail/detailarbitrage.html" class="btn">Voir plus</a>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="img/tctascreen.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Soundtrack - The Chronicles of The Abyss</h5>
-                        <div class="badges">
-                            <span class="badge">LMMS</span>
-                            <span class="badge">IA Générative</span>
+                    <div class="card">
+                        <img src="img/arbitrage/interface.png" class="card-img-top" alt="Arbitrage Travail-Région">
+                        <div class="card-body">
+                            <h5 class="card-title">Arbitrage Travail-Région <span class="version-badge">v0.1.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">Python</span>
+                                <span class="badge">Streamlit</span>
+                                <span class="badge">Pandas</span>
+                                <span class="badge">Data Science</span>
+                            </div>
+                            <p class="card-text">Application d'aide à la décision pour le télétravail basée sur un algorithme de scoring du stress réseau de transports SNCF/RATP.</p>
+                            <a href="detail/detailarbitrage.html" class="btn">Voir plus</a>
                         </div>
-                        <p class="card-text">Bande originale complète composée de 22 thèmes immersifs, conçue pour
-                            rythmer l’exploration et les combats épiques d’un univers de jeu vidéo fictif.
-                        </p>
-                        <a href="detail/detailtcta.html" class="btn">Voir plus</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/tcta/tctascreen.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Soundtrack - The Chronicles of The Abyss <span class="version-badge">v1.0.0</span></h5>
+                            <div class="badges">
+                                <span class="badge">LMMS</span>
+                                <span class="badge">IA Générative</span>
+                            </div>
+                            <p class="card-text">Bande originale complète composée de 22 thèmes immersifs, conçue pour
+                                rythmer l’exploration et les combats épiques d’un univers de jeu vidéo fictif.
+                            </p>
+                            <a href="detail/detailtcta.html" class="btn">Voir plus</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -217,12 +300,13 @@
                     </svg>
                 </a>
             </div>
-            <p>© 2025 Melvin Mateta — Portfolio</p>
+            <p>© 2026 Melvin Mateta — Portfolio</p>
         </div>
     </footer>
 
     <script src="js/click-light.js" defer></script>
     <script src="js/burger.js" defer></script>
+    <script src="js/filter-projects.js" defer></script>
 
 </body>
 

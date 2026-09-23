@@ -13,6 +13,20 @@ body.sonic-mode .site-header {
   background: rgba(0, 102, 209, 0.95);
 }
 
+body.sonic-mode .brand-logo {
+  background: rgba(255, 210, 74, 0.15);
+  border: 1.5px solid rgba(255, 210, 74, 0.5);
+  box-shadow: 0 0 10px rgba(255, 210, 74, 0.35);
+  padding: 3px;
+  border-radius: 50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.sonic-mode .brand-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 16px rgba(255, 210, 74, 0.6);
+}
+
 body.sonic-mode .brand-name {
   color: #fff;
 }
@@ -22,10 +36,20 @@ body.sonic-mode .nav-link {
 }
 
 body.sonic-mode .mode-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: #06131a;
   background: #ffd24a;
-  padding: 8px 12px;
+  padding: 8px 14px;
   border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.sonic-mode .mode-switch:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 210, 74, 0.6);
 }
 
 body.sonic-mode .music-toggle {
@@ -52,15 +76,15 @@ body.sonic-mode .card3:hover {
 }
 
 body.sonic-mode .card1:hover {
-  background-image: url('../img/sonic1.gif');
+  background-image: url('../img/sonic/sonic1.gif');
 }
 
 body.sonic-mode .card2:hover {
-  background-image: url('../img/sonic2.gif');
+  background-image: url('../img/sonic/sonic2.gif');
 }
 
 body.sonic-mode .card3:hover {
-  background-image: url('../img/sonic3.gif');
+  background-image: url('../img/sonic/sonic3.gif');
 }
 
 body.sonic-mode .visual-plate {
