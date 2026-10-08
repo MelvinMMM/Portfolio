@@ -1,26 +1,55 @@
-const scrollContainer = document.getElementById('projectScroll');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollContainer = document.getElementById('projectScroll');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
 
-nextBtn.addEventListener('click', () => {
-    // On récupère la largeur d'un élément + le gap (24px)
-    const cardWidth = scrollContainer.querySelector('.project-preview').clientWidth + 24;
-    scrollContainer.scrollBy({ left: cardWidth, behavior: 'smooth' });
-});
+    if (!scrollContainer || !nextBtn || !prevBtn) return;
 
-prevBtn.addEventListener('click', () => {
-    const cardWidth = scrollContainer.querySelector('.project-preview').clientWidth + 24;
-    scrollContainer.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-});
+    // Rendre le carrousel focusable au clavier avec support des flèches directionnelles
+    if (!scrollContainer.hasAttribute('tabindex')) {
+        scrollContainer.setAttribute('tabindex', '0');
+        scrollContainer.setAttribute('role', 'region');
+        scrollContainer.setAttribute('aria-label', 'Carrousel de projets connexes. Utilisez les flèches directionnelles gauche et droite pour faire défiler.');
+    }
 
-// Optionnel : Désactiver les flèches si on est au bout du scroll
-scrollContainer.addEventListener('scroll', () => {
-    const scrollLeft = scrollContainer.scrollLeft;
-    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-    
-    prevBtn.style.opacity = scrollLeft <= 0 ? "0.3" : "1";
-    prevBtn.style.pointerEvents = scrollLeft <= 0 ? "none" : "auto";
-    
-    nextBtn.style.opacity = scrollLeft >= maxScroll - 5 ? "0.3" : "1";
-    nextBtn.style.pointerEvents = scrollLeft >= maxScroll - 5 ? "none" : "auto";
+    const getCardWidth = () => {
+        const firstCard = scrollContainer.querySelector('.project-preview');
+        return firstCard ? firstCard.clientWidth + 24 : 300;
+    };
+
+    const updateArrowButtons = () => {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+        const isAtStart = scrollLeft <= 5;
+        const isAtEnd = scrollLeft >= maxScroll - 5;
+
+        prevBtn.disabled = isAtStart;
+        nextBtn.disabled = isAtEnd;
+    };
+
+    nextBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+    });
+
+    // Support du défilement au clavier via les flèches gauche/droite sur le conteneur
+    scrollContainer.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            scrollContainer.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            scrollContainer.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        }
+    });
+
+    scrollContainer.addEventListener('scroll', updateArrowButtons);
+    window.addEventListener('resize', updateArrowButtons);
+
+    // Initialisation immédiate de l'état disabled
+    updateArrowButtons();
 });

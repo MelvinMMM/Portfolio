@@ -132,6 +132,7 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.card h3,
 .card h4 {
     margin: 0 0 12px;
     color: #e8faff;
@@ -201,6 +202,7 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.about-hero-right h2,
 .about-hero-right h3 {
   font-family: Orbitron, sans-serif;
   color: var(--accent);
@@ -245,6 +247,7 @@ a:hover {
   max-width: 1100px;
 }
 
+.game-toggle-section h2,
 .game-toggle-section h3 {
   font-family: Orbitron, sans-serif;
   color: #fff;

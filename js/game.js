@@ -193,9 +193,22 @@ canvas.addEventListener('touchend', endInput);
 
 const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, z: false, s: false, q: false, d: false };
 document.addEventListener('keydown', (e) => {
-    startMusic();
-    if (isModalOpen) { if (e.code === 'Space' || e.code === 'Escape') closeModal(); return; }
-    if (keys.hasOwnProperty(e.key)) keys[e.key] = true;
+    if (gameContainer && gameContainer.classList.contains('hidden')) return;
+
+    if (isModalOpen) {
+        if (e.code === 'Space' || e.code === 'Escape' || e.key === 'Escape') {
+            e.preventDefault();
+            closeModal();
+        }
+        return;
+    }
+
+    if (document.activeElement === canvas || input.active) {
+        startMusic();
+        if (keys.hasOwnProperty(e.key)) {
+            keys[e.key] = true;
+        }
+    }
 });
 document.addEventListener('keyup', (e) => { if (keys.hasOwnProperty(e.key)) keys[e.key] = false; });
 closeBtn.addEventListener('click', closeModal);
@@ -209,6 +222,10 @@ function openModal(zone) {
     modalTitle.textContent = zone.title;
     modalDesc.textContent = zone.desc;
     modal.classList.remove('hidden');
+    // Déplacer le focus vers le bouton de fermeture pour accessibilité clavier
+    setTimeout(() => {
+        if (closeBtn) closeBtn.focus();
+    }, 50);
 }
 
 function openLink(zone) {
@@ -228,6 +245,8 @@ function closeModal() {
     modal.classList.add('hidden');
     player.x = (canvas.width / 2) - (player.w / 2);
     player.y = (canvas.height / 2) - (player.h / 2);
+    // Renvoyer le focus au canvas
+    if (canvas) canvas.focus();
 }
 
 function checkCollision(rect1, rect2) {
@@ -324,12 +343,10 @@ function update() {
 }
 
 window.addEventListener('keydown', function(e) {
-    // Liste des touches à bloquer (Espace, Flèche Haut, Flèche Bas)
-    const keysToBlock = ['Space', 'ArrowUp', 'ArrowDown'];
-
-    if (keysToBlock.includes(e.code)) {
-        // Empêche le défilement uniquement si on n'est pas dans un champ de texte
-        if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+    // Empêche le défilement UNIQUEMENT si le jeu est visible et que le joueur interagit avec le canvas
+    if (gameContainer && !gameContainer.classList.contains('hidden') && (document.activeElement === canvas || isModalOpen)) {
+        const keysToBlock = ['Space', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
+        if (keysToBlock.includes(e.code) || keysToBlock.includes(e.key)) {
             e.preventDefault();
         }
     }
@@ -346,6 +363,7 @@ if (toggleGameBtn && gameSectionContainer) {
         const isHidden = gameSectionContainer.classList.toggle('hidden');
         if (isHidden) {
             toggleGameBtn.textContent = '🎮 Lancer la version interactive';
+            toggleGameBtn.setAttribute('aria-expanded', 'false');
             if (musicStarted) {
                 bgMusic.pause();
                 bgMusic.currentTime = 0;
@@ -353,9 +371,11 @@ if (toggleGameBtn && gameSectionContainer) {
             }
         } else {
             toggleGameBtn.textContent = '🎮 Cacher la version interactive';
+            toggleGameBtn.setAttribute('aria-expanded', 'true');
             resizeGame();
             setTimeout(() => {
                 gameSectionContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (canvas) canvas.focus();
             }, 100);
         }
     });

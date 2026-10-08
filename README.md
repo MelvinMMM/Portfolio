@@ -1,11 +1,28 @@
-# Portfolio de Melvin Mateta — v3.0.0
+# Portfolio de Melvin Mateta — v3.1.0
 
 > **"Développeur Web & Créatif — Fast, Modern & Cyber Interfaces"**  
 > Conception d'applications web réactives, architecture modulaire, composition musicale et interfaces cyberpunk soignées.
 
-[![Version](https://img.shields.io/badge/version-3.0.0-00f7ff.svg?style=for-the-badge&logo=semver)](https://github.com/MelvinMMM/portfolio)
+[![Version](https://img.shields.io/badge/version-3.1.0-00f7ff.svg?style=for-the-badge&logo=semver)](https://github.com/MelvinMMM/portfolio)
 [![Status](https://img.shields.io/badge/status-production_ready-00ff66.svg?style=for-the-badge)](https://github.com/MelvinMMM/portfolio)
+[![RGAA 4.1](https://img.shields.io/badge/RGAA_4.1-conforme_AA-57e6ff.svg?style=for-the-badge)](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/)
+[![W3C](https://img.shields.io/badge/W3C-validé-brightgreen.svg?style=for-the-badge)](https://validator.w3.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
+
+---
+
+## ♿ Nouveautés de la Version 3.1.0 (Octobre 2026) : Conformité RGAA 4.1, W3C & Accessibilité Clavier
+
+Cette version **3.1.0** consacre l'accessibilité numérique inclusive et la standardisation web du portfolio :
+* **Conformité Intégrale RGAA 4.1 (WCAG 2.1 AA) & W3C** : Audit complet sur l'ensemble des 18 pages HTML et feuilles de style CSS avec **0 anomalie détectée**.
+* **Navigation Clavier Optimisée & Débridée** :
+  * Lien d'évitement (*Skip Link*) actif sur toutes les pages avec transfert physique de focus (`tabindex="-1"` sur `<main id="main-content">`).
+  * Débridage du défilement des touches fléchées et espace dans la page À Propos (restriction stricte du jeu au canvas focusé).
+  * Menu mobile hermétique à la fuite de tabulation (`visibility: hidden`) et support de la touche `Escape` (W3C APG).
+  * Carrousel de projets avec support natif de `disabled` et défilement horizontal direct au clavier (`tabindex="0"`).
+* **Repères et Hiérarchie Sémantiques** : Landmarks `<header role="banner">`, `<main id="main-content">`, `<nav id="main-nav">`, `<footer role="contentinfo">`, élimination de tous les sauts de hiérarchie de titres (`h2 -> h5` résolu en `<h3>`).
+* **Contrôles Multimédia Réactivés** : Prise de contrôle utilisateur sur toutes les vidéos du site (`controls`, `aria-label`, `title`).
+* **Sécurisation & Labellisation des Liens** : Protection `rel="noopener noreferrer"` systématique et mentions explicites `(nouvel onglet)` pour les lecteurs d'écran.
 
 ---
 

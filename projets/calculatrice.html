@@ -12,11 +12,12 @@
     <link rel="icon" type="Image/jpg" href="../img/logo.png">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-    <div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+    <main id="main-content" class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;" tabindex="-1">
         <h1 class="mb-4 mt-4 titre-calculatrice">Calculatrice</h1>
         <div id="root"></div>
-    </div>
+    </main>
     
     <script type="text/babel">
         function Calculatrice() {
@@ -79,6 +80,7 @@
                         className="form-control mb-4 text-end fs-2 py-3" 
                         value={nombreafficher} 
                         readOnly 
+                        aria-label="Écran d'affichage de la calculatrice"
                     />
                     <div 
                         className="d-grid gap-3" 

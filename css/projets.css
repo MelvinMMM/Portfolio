@@ -308,6 +308,7 @@ h3 {
   margin-bottom: 16px;
 }
 
+.no-results h2,
 .no-results h3 {
   font-family: Orbitron, Inter, sans-serif;
   color: #ffffff;
