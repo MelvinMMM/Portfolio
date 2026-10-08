@@ -24,28 +24,42 @@ window.addEventListener('mousedown', (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".project-image img, .project-image-full img");
+    // Ne pas instancier la lightbox si aucune image zoomable n'est présente sur la page
+    if (!images.length) return;
+
     const lightbox = document.createElement("div");
     lightbox.className = "lightbox-overlay";
-    style = `
-        position: fixed;
-        top: 0; left: 0;
-    `;
-    lightbox.style.cssText = style;
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Aperçu agrandi de l'image");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightbox.style.cssText = "position: fixed; top: 0; left: 0;";
     
     const lightboxImage = document.createElement("img");
+    lightboxImage.alt = "Aperçu agrandi du projet";
     lightbox.appendChild(lightboxImage);
     document.body.appendChild(lightbox);
-
-    const images = document.querySelectorAll(".project-image img, .project-image-full img");
 
     images.forEach(img => {
         img.addEventListener("click", () => {
             lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt || "Aperçu agrandi du projet";
             lightbox.classList.add("active");
+            lightbox.setAttribute("aria-hidden", "false");
         });
     });
 
-    lightbox.addEventListener("click", () => {
+    const closeLightbox = () => {
         lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+    };
+
+    lightbox.addEventListener("click", closeLightbox);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.classList.contains("active")) {
+            closeLightbox();
+        }
     });
 });
