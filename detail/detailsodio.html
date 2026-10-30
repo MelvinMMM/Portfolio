@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet - Sodio (Sonic-Audio)</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/detailprojets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo Melvin Mateta" class="brand-logo">
+                <span class="brand-name">Melvin Mateta</span>
+            </a>
+            <button class="burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="main-nav" aria-label="Navigation principale">
+                <a class="nav-link" href="../projets.html">Projets</a>
+                <a class="nav-link" href="../apropos.html">A propos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page" id="main-content" tabindex="-1">
+        <section class="project-header">
+            <h1>Sodio (Sonic-Audio) <span class="version-badge">v1.0.0</span></h1>
+            <div class="info1">
+                <div class="mise_en_forme">
+                    <p><strong>Compétences</strong></p>
+                    <p>Python, IA Générative</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Équipe</strong></p>
+                    <p>Melvin Mateta</p>
+                </div>
+                <div class="mise_en_forme">
+                    <p><strong>Date</strong></p>
+                    <p>Octobre 2026</p>
+                </div>
+            </div>
+            
+            <div class="project-image-full">
+                <img src="../img/sodio/parametre.png" alt="Sodio (Sonic-Audio) Tableau de bord et paramètres audio">
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="info2">
+                <h2><strong>Description du Projet</strong></h2>
+                <p>
+                    <strong>Sodio (Sonic-Audio)</strong> est un micro-agent de bureau Windows souverain et ultra-rapide de dictée vocale, pensé et développé sur-mesure pour fluidifier le workflow créatif et technique quotidien.
+                </p>
+                <p>
+                    Inspiré de l’énergie mystique de <em>Darkspine Sonic</em> (Aura violette électrique et anneaux dorés), Sodio élimine toute latence : le flux de voix est capturé directement en mémoire vive (RAM) à 16 kHz, analysé par l'API multimodale <strong>Google Gemini Flash-Lite</strong>, puis injecté instantanément sous le curseur dans n'importe quel logiciel (VS Code, terminal, navigateur, Discord) en <strong>moins de 1,2 seconde</strong>.
+                </p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://github.com/MelvinMMM/Sodio" target="_blank" rel="noopener noreferrer" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-brands fa-github"></i> Voir le code sur GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Paramètres Audio & Déclenchement Sonic-Toggle</h2>
+                <p>
+                    Grâce à un hook clavier global bas niveau non-bloquant, un simple appui sur le raccourci (par défaut <strong>F4</strong>) déclenche l'enregistrement sans jamais voler le focus de la fenêtre de travail en cours. L'utilisateur peut sélectionner son périphérique d'entrée micro, ajuster la sensibilité et choisir le niveau de feedback audio et visuel (Aura HUD).
+                </p>
+            </div>
+
+            <div class="project-image">
+                <img src="../img/sodio/parametre.png" alt="Interface des paramètres et sélecteur de microphone de Sodio">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/sodio/moteuriacle.png" alt="Configuration du modèle Gemini et de la clé API Google AI Studio">
+            </div>
+
+            <div class="project-video-text">
+                <h2>Moteur IA Multimodal & Gestion de Clé</h2>
+                <p>
+                    Sodio s'appuie directement sur les modèles multimodaux de pointe de <strong>Google Gemini</strong> via le quota personnel gratuit de Google AI Studio. L'interface dédiée permet d'enregistrer et de tester sa clé en toute sécurité, de basculer de modèle (Gemini Flash-Lite) et d'assurer une ponctuation et un formatage automatique parfait du langage parlé.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Lexique Personnel & Jargon Spécialisé</h2>
+                <p>
+                    Pour pallier les erreurs courantes de transcription sur les termes techniques ou artistiques rares (noms de VST, logiciels musicaux comme LMMS, frameworks de dev, terminologie IA), Sodio intègre un dictionnaire personnalisé interactif. Chaque mot ajouté est injecté dans le prompt système pour garantir une retranscription fidèle dès le premier essai.
+                </p>
+            </div>
+
+            <div class="project-image">
+                <img src="../img/sodio/lexique.png" alt="Gestionnaire de vocabulaire et lexique personnalisé">
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-image">
+                <img src="../img/sodio/historique.png" alt="Journal d'historique local et ré-écoute des enregistrements">
+            </div>
+
+            <div class="project-video-text">
+                <h2>Historique Intelligent & Ré-écoute</h2>
+                <p>
+                    L'application garde une trace des dictées récentes avec horodatage, durée d'enregistrement et temps de calcul. L'utilisateur peut ré-écouter le fichier audio in-memory sauvegardé, copier le texte généré dans le presse-papier en un clic ou corriger une dictée antérieure.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-video-wrapper">
+            <div class="project-video-text">
+                <h2>Confidentialité Locale & Purge 24h</h2>
+                <p>
+                    Conçu avec une politique stricte de souveraineté des données, Sodio ne transmet aucun audio à des serveurs tiers en dehors de l'appel direct à l'API Google via la clé de l'utilisateur. Tous les fichiers audio temporaires conservés pour la ré-écoute sont <strong>automatiquement purgés après 24 heures</strong>.
+                </p>
+            </div>
+
+            <div class="project-image">
+                <img src="../img/sodio/donneepriver.png" alt="Panneau de confidentialité et rétention des données de Sodio">
+            </div>
+        </section>
+
+        <section class="other-projects">
+            <h2>Autres Projets</h2>
+            <div class="carousel-container">
+                <button class="nav-arrow left" id="prevBtn" aria-label="Projet précédent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="projects-preview" id="projectScroll">
+                    <a href="detailmixology.html" class="project-preview">
+                        <div class="preview-image-container">
+                            <img src="../img/mixology/tableaudebord.png" alt="Aperçu du projet Mixology Master">
+                        </div>
+                        <div class="preview-info">
+                            <h3>Mixology Master</h3>
+                            <span>Application d'apprentissage barman & cocktails.</span>
+                        </div>
+                    </a>
+
+                    <a href="detailtoitmoi.html" class="project-preview">
+                        <div class="preview-image-container">
+                            <img src="../img/toitmoi/ecranprincipal.png" alt="Aperçu du projet ToitMoi">
+                        </div>
+                        <div class="preview-info">
+                            <h3>ToitMoi</h3>
+                            <span>Application immobilière interactive swipe & match.</span>
+                        </div>
+                    </a>
+
+                    <a href="detailchicbook.html" class="project-preview">
+                        <div class="preview-image-container">
+                            <img src="../img/chicbook/pagedaccueil.png" alt="Aperçu du projet ChicBook">
+                        </div>
+                        <div class="preview-info">
+                            <h3>ChicBook</h3>
+                            <span>Job board spécialisé pour artistes et recruteurs.</span>
+                        </div>
+                    </a>
+
+                    <a href="detailarbitrage.html" class="project-preview">
+                        <div class="preview-image-container">
+                            <img src="../img/arbitrage/interface.png" alt="Aperçu du projet Arbitrage Travail-Région">
+                        </div>
+                        <div class="preview-info">
+                            <h3>Arbitrage Travail-Région</h3>
+                            <span>Outil d'aide à la décision télétravail sous Streamlit.</span>
+                        </div>
+                    </a>
+
+                    <a href="detailtcta.html" class="project-preview">
+                        <div class="preview-image-container">
+                            <img src="../img/tcta/tctascreen.png" alt="Aperçu de la soundtrack The Chronicles of The Abyss">
+                        </div>
+                        <div class="preview-info">
+                            <h3>The Chronicles of The Abyss</h3>
+                            <span>Soundtrack originale de 22 thèmes immersifs.</span>
+                        </div>
+                    </a>
+                </div>
+
+                <button class="nav-arrow right" id="nextBtn" aria-label="Projet suivant">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mmateta/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn (nouvel onglet)">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.32 8.16H4.7V24H.32V8.16zM8.55 8.16h4.18v2.15h.06c.58-1.1 2-2.26 4.11-2.26 4.39 0 5.2 2.89 5.2 6.65V24h-4.38v-8.16c0-1.95-.04-4.45-2.71-4.45-2.71 0-3.13 2.12-3.13 4.31V24H8.55V8.16z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="mailto:melvin.mateta@gmail.com?subject=Demande de contact" aria-label="Envoyer un email">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path
+                            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l8 6.75 8-6.75V18H4z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="https://github.com/MelvinMMM" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub (nouvel onglet)">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path
+                            d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.11 3.32 9.44 7.94 10.97.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.23.7-3.91-1.56-3.91-1.56-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.76 0-1.27.46-2.31 1.21-3.12-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 2.91-.39c.99 0 1.99.13 2.92.39 2.21-1.5 3.19-1.19 3.19-1.19.63 1.59.23 2.76.11 3.05.76.81 1.21 1.85 1.21 3.12 0 4.48-2.71 5.47-5.3 5.75.42.36.8 1.09.8 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="https://www.youtube.com/@rohaxmm6315" target="_blank" rel="noopener noreferrer"
+                    aria-label="YouTube (nouvel onglet)">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path
+                            d="M23.5 6.2s-.23-1.64-.95-2.36c-.9-.95-1.9-.96-2.36-1.01C16.14 2.5 12 2.5 12 2.5h-.01s-4.14 0-8.19.33c-.46.05-1.46.06-2.36 1.01C.73 4.56.5 6.2.5 6.2S.25 8.16.25 10.13v1.72c0 1.97.25 3.93.25 3.93s.23 1.64.95 2.36c.9.95 2.08.92 2.61 1.02 1.9.18 7.94.32 7.94.32s4.14-.01 8.19-.34c.46-.05 1.46-.06 2.36-1.01.72-.72.95-2.36.95-2.36s.25-1.96.25-3.93v-1.72c0-1.97-.25-3.93-.25-3.93zM9.75 14.62V7.88l6.13 3.37-6.13 3.37z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <p>© 2026 Melvin Mateta — Portfolio</p>
+        </div>
+    </footer>
+    <script src="../js/click-light.js" defer></script>
+    <script src="../js/burger.js" defer></script>
+    <script src="../js/scroll-projects.js" defer></script>
+
+</body>
+
+</html>

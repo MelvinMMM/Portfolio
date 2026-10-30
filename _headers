@@ -1,0 +1,19 @@
+# Netlify Security Headers
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=(self)
+
+# Interdire l'accès direct aux fichiers système et de configuration
+/.git/*
+  status: 404
+/.github/*
+  status: 404
+/package.json
+  status: 404
+/package-lock.json
+  status: 404
+/node_modules/*
+  status: 404
