@@ -109,7 +109,7 @@
       body.classList.remove('sonic-mode');
 
       if(portrait) {
-        portrait.src = 'img/melvin3.png';
+        portrait.src = 'img/melvin_portrait.png';
         portrait.alt = 'Melvin illustration';
       }
 
