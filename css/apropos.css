@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  color: #e8faff;
+  color: var(--text-main);
   background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -59,7 +59,7 @@ a:hover {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 0 20px rgba(87, 230, 255, 0.3);
-    color: #fff;
+    color: var(--text-pure);
     z-index: 10;
 }
 
@@ -135,7 +135,7 @@ a:hover {
 .card h3,
 .card h4 {
     margin: 0 0 12px;
-    color: #e8faff;
+    color: var(--text-main);
     font-size: 2rem;       
     font-family: Orbitron, sans-serif;
 }
@@ -182,7 +182,7 @@ a:hover {
 
 .about-hero-left h1 {
   font-family: Orbitron, sans-serif;
-  color: #fff;
+  color: var(--text-pure);
   font-size: clamp(28px, 4vw, 42px);
   margin-top: 0;
   margin-bottom: 24px;
@@ -225,7 +225,7 @@ a:hover {
 }
 
 .about-info-list strong {
-  color: #fff;
+  color: var(--text-pure);
   display: inline-block;
   width: 120px;
 }
@@ -250,7 +250,7 @@ a:hover {
 .game-toggle-section h2,
 .game-toggle-section h3 {
   font-family: Orbitron, sans-serif;
-  color: #fff;
+  color: var(--text-pure);
   font-size: 1.5rem;
   margin-bottom: 12px;
 }
@@ -283,7 +283,7 @@ a:hover {
 
 .game-music-toggle:hover {
   background: var(--accent);
-  color: #030612;
+  color: var(--bg-0);
   transform: scale(1.05);
 }
 
@@ -293,8 +293,8 @@ a:hover {
 }
 
 .btn.primary {
-  background: linear-gradient(90deg, var(--accent), #67cfff);
-  color: #031018;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  color: var(--text-dark);
   box-shadow: 0 8px 30px rgba(6, 18, 30, 0.45);
   border: var(--accent) 2px solid;
   text-decoration: none;

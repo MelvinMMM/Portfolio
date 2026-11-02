@@ -6,7 +6,7 @@
 
 body.sonic-mode {
   background: var(--sonic-bg);
-  color: #06131a;
+  color: var(--sonic-text);
 }
 
 body.sonic-mode .site-header {
@@ -28,7 +28,7 @@ body.sonic-mode .brand-logo:hover {
 }
 
 body.sonic-mode .brand-name {
-  color: #fff;
+  color: var(--text-pure);
 }
 
 body.sonic-mode .nav-link {
@@ -39,8 +39,8 @@ body.sonic-mode .mode-switch {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #06131a;
-  background: #ffd24a;
+  color: var(--sonic-text);
+  background: var(--sonic-accent);
   padding: 8px 14px;
   border-radius: 999px;
   font-weight: 700;
@@ -53,8 +53,8 @@ body.sonic-mode .mode-switch:hover {
 }
 
 body.sonic-mode .music-toggle {
-  color: #06131a;
-  background: #ffd24a;
+  color: var(--sonic-text);
+  background: var(--sonic-accent);
   padding: 8px 12px;
   border-radius: 999px;
   margin-left: 4px;
@@ -62,7 +62,7 @@ body.sonic-mode .music-toggle {
 
 body.sonic-mode .card {
   background: rgba(255, 255, 255, 0.06);
-  color: #06131a;
+  color: var(--sonic-text);
   pointer-events: visible;
 }
 

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'IBM Plex Mono', monospace;
-  color: #e8faff;
+  color: var(--text-main);
   background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
   min-height: 100vh;
   transition: background 0.5s ease;
@@ -19,14 +19,14 @@ h1 {
   margin-bottom: 0px;
   width: 100%;
   font-size: clamp(1.8rem, 4.5vw, 2.8rem);
-  color: #ffffff;
+  color: var(--text-pure);
   letter-spacing: 1px;
   text-shadow: 0 0 24px rgba(87, 230, 255, 0.35);
 }
 
 h2 {
   font-family: Orbitron, Inter, sans-serif;
-  color: #ffffff;
+  color: var(--text-pure);
 }
 
 a {
@@ -108,7 +108,7 @@ p {
 .mise_en_forme p:last-child {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.92rem;
-  color: #e8faff;
+  color: var(--text-main);
   line-height: 1.5;
   margin: 0;
 }
@@ -200,7 +200,7 @@ p {
 .info2 h2 {
   font-family: Orbitron, Inter, sans-serif;
   font-size: 1.4rem;
-  color: #ffffff;
+  color: var(--text-pure);
   margin: 0 0 16px 0;
   text-align: left;
   display: flex;
@@ -261,7 +261,7 @@ p {
 .project-video-text h2 {
   font-family: Orbitron, Inter, sans-serif;
   font-size: 1.3rem;
-  color: #ffffff;
+  color: var(--text-pure);
   margin: 0 0 14px 0;
   text-align: left;
   line-height: 1.4;
@@ -382,7 +382,7 @@ p {
 
 .see-more .section-title {
   font-family: Orbitron, sans-serif;
-  color: #e8faff;
+  color: var(--text-main);
   font-size: 1.5rem;
   margin-bottom: 24px;
   text-align: left;
@@ -460,7 +460,7 @@ p {
 .see-more .preview-info h3,
 .see-more .preview-info h5 {
   font-family: Orbitron, sans-serif;
-  color: #fff;
+  color: var(--text-pure);
   margin: 0 0 8px 0;
   font-size: 1.15rem;
 }
@@ -478,7 +478,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   background: var(--accent);
-  color: #031018;
+  color: var(--text-dark);
   border: none;
   width: 44px;
   height: 44px;
